@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Post Search
-permalink: /allposts/
+title: Posts
+permalink: /posts/
 sitemap: false
 ---
     
