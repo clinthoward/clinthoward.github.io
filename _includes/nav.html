@@ -18,17 +18,14 @@
                 <li>
                     <a href="{{ site.baseurl }}/">Home</a>
                 </li>
-		    {% assign sorted_pages = site.pages | sort:"order" %}
-		    {% for node in sorted_pages %}
-		                 {% if node.title %}
-				 {% if node.url != '/404.html' %}
-  			<li>
-		        <a href="{{ nodeurl | prepend: site.baseurl }}">{{ node.title }}</a>
-			</li>
-		    {% endfor %}
+		{% for page in site.pages %}{% if page.title %}
+		    {% if page.url != '/404.html' %}
+		    <li>
+			    <a href="{{ page.url | prepend: site.baseurl }}">{ page.title }}</a>
+		    </li>
+		    {% endif}
 
-				{% endif %}
-                {% endif %}
+                {% endif %}{% endfor %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
