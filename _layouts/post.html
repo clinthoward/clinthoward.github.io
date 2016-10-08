@@ -2,6 +2,7 @@
 layout: default
 ---
 <!-- Post Header -->
+
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
     <div class="container">
         <div class="row">
@@ -23,7 +24,12 @@ layout: default
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+		</script>
 				{{ content }}
 
                 <hr>
