@@ -3,6 +3,7 @@ layout: page
 title: Blog
 permalink: /blog/
 sitemap: false
+Order: 3
 ---
     
 {% for post in site.categories.Blog %}
