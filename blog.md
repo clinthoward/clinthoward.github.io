@@ -5,7 +5,7 @@ permalink: /blog/
 sitemap: false
 ---
     
-{% for post in site.posts.categories.Blog %}
+{% for post in site.categories.Blog %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
