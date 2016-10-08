@@ -3,7 +3,7 @@ layout: page
 title: Archive
 permalink: /sitearchive/
 sitemap: false
-Order: 5
+Order: 2
 ---
 
 <section id="archive">
