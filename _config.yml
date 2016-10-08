@@ -14,6 +14,11 @@ email_username:  clint.howard92@gmail.com
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
 # google_tracking_id:
+author :
+  name : Clint Howard
+  email : clint.howard92@gmail.com
+  github : clinthoward
+  linkedin: clint-howard-5a29b927
 
 # Build settings
 markdown: kramdown
