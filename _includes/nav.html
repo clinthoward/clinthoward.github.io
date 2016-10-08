@@ -24,13 +24,11 @@
 				 {% if node.url != '/404.html' %}
   			<li>
 		        <a href="{{ nodeurl | prepend: site.baseurl }}">{{ node.title }}</a>
-			<li>
+			</li>
 		    {% endfor %}
 
-                <li>
-                </li>
 				{% endif %}
-                {% endif %}{% endfor %}
+                {% endif %}
             </ul>
         </div>
         <!-- /.navbar-collapse -->
