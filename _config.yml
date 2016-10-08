@@ -1,11 +1,11 @@
 # Site settings
-title: Clean Howard
+title: Clint Howard
 header-img: img/home-bg.jpg
 email: clint.howard92@gmail.com
-copyright_name: 
+copyright_name: Your/Project/Corporate Name
 description: "Write your site description here. It will be used as your sites meta description as well!"
 baseurl: ""
-url: ""
+url: "http://yourdomain.com"
 twitter_username: 
 github_username:  clinthoward
 facebook_username:  
