@@ -115,7 +115,7 @@ plt.show()
 ![png](/img/fdic_8_0.png)
 
 
-We see that CA has both the largest number of failures and the largest total estimated losses. Let's see whose contributing to this.
+We see that TX has both the largest number of failures and the largest total estimated losses. Let's see whose contributing to this.
 
 
 ```python
