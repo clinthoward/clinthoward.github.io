@@ -7,6 +7,7 @@ author:     "Clint Howard"
 header-img: "/img/post-bg-06.jpg"
 category: Portfolio
 tags: [jekyll, python]
+comments: True
 ---
 
 
