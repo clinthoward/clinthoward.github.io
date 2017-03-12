@@ -12,7 +12,7 @@ tags: [jekyll, python]
 
 
 # Investigation of Bank Failures
-Data provided from FDIC via Kaggle: https://www.kaggle.com/fdic/bank-failures
+Data provided from Kaggle: https://www.kaggle.com/fdic/bank-failures
 
 
 ```python
@@ -106,7 +106,7 @@ plt.show()
 
 
 ```python
-df.groupby("State").count()["Failure Date"].sort_values(ascending=False)[1:25].plot(kind="bar")
+df.groupby("State").count()["Failure Date"].sort_values(ascending=False)[0:25].plot(kind="bar")
 plt.ylabel("Total Failures")
 plt.show()
 ```
@@ -119,7 +119,7 @@ We see that CA has both the largest number of failures and the largest total est
 
 
 ```python
-df.groupby("State").sum()["Estimated Loss (2015)"].sort_values(ascending=False)[1:25].plot(kind="bar")
+df.groupby("State").sum()["Estimated Loss (2015)"].sort_values(ascending=False)[0:25].plot(kind="bar")
 plt.ylabel("Total Estimated Losses")
 plt.show()
 ```
@@ -130,7 +130,7 @@ plt.show()
 
 
 ```python
-df[df["State"] == " CA"].sort_values(by = "Estimated Loss (2015)", ascending = False)[1:25]
+df[df["State"] == " TX"].sort_values(by = "Estimated Loss (2015)", ascending = False)[0:10]
 ```
 
 
@@ -160,166 +160,184 @@ df[df["State"] == " CA"].sort_values(by = "Estimated Loss (2015)", ascending = F
   </thead>
   <tbody>
     <tr>
-      <th>1773</th>
-      <td>7283.0</td>
-      <td>LINCOLN SAVINGS &amp; LOAN</td>
+      <th>1520</th>
+      <td>6938.0</td>
+      <td>UNIVERSITY FEDERAL SAVINGS</td>
       <td>SAVINGS ASSOCIATION</td>
       <td>FEDERAL/STATE</td>
-      <td>IRVINE, CA</td>
-      <td>1989-04-14</td>
+      <td>HOUSTON, TX</td>
+      <td>1989-02-14</td>
       <td>RTC</td>
-      <td>29642.0</td>
+      <td>30685.0</td>
       <td>ACQUISITION</td>
-      <td>4193981</td>
-      <td>4857204.0</td>
-      <td>3142552.0</td>
-      <td>IRVINE</td>
-      <td>CA</td>
-      <td>0.863456</td>
+      <td>3776427</td>
+      <td>4480389.0</td>
+      <td>2177985.0</td>
+      <td>HOUSTON</td>
+      <td>TX</td>
+      <td>0.842879</td>
     </tr>
     <tr>
-      <th>2573</th>
-      <td>1279.0</td>
-      <td>GREAT AMERICAN FSA</td>
-      <td>SAVINGS BANK</td>
-      <td>STATE</td>
-      <td>SAN DIEGO, CA</td>
-      <td>1991-08-09</td>
-      <td>RTC</td>
-      <td>28041.0</td>
-      <td>ACQUISITION</td>
-      <td>7230789</td>
-      <td>9523603.0</td>
-      <td>995496.0</td>
-      <td>SAN DIEGO</td>
-      <td>CA</td>
-      <td>0.759249</td>
-    </tr>
-    <tr>
-      <th>2766</th>
-      <td>1243.0</td>
-      <td>HOMEFED BANK, FA</td>
-      <td>SAVINGS BANK</td>
-      <td>STATE</td>
-      <td>SAN DIEGO, CA</td>
-      <td>1992-07-06</td>
-      <td>RTC</td>
-      <td>29234.0</td>
-      <td>ACQUISITION</td>
-      <td>8903571</td>
-      <td>12175590.0</td>
-      <td>751633.0</td>
-      <td>SAN DIEGO</td>
-      <td>CA</td>
-      <td>0.731264</td>
-    </tr>
-    <tr>
-      <th>3110</th>
-      <td>10147.0</td>
-      <td>UNITED COMMERCIAL BANK</td>
-      <td>COMMERCIAL BANK</td>
-      <td>STATE</td>
-      <td>SAN FRANCISCO, CA</td>
-      <td>2009-11-06</td>
-      <td>DIF</td>
-      <td>32469.0</td>
-      <td>ACQUISITION</td>
-      <td>7653666</td>
-      <td>10895336.0</td>
-      <td>645369.0</td>
-      <td>SAN FRANCISCO</td>
-      <td>CA</td>
-      <td>0.702472</td>
-    </tr>
-    <tr>
-      <th>3148</th>
-      <td>10185.0</td>
-      <td>LA JOLLA BANK, FSB</td>
-      <td>SAVINGS BANK</td>
-      <td>STATE</td>
-      <td>LA JOLLA, CA</td>
-      <td>2010-02-19</td>
-      <td>DIF</td>
-      <td>32423.0</td>
-      <td>ACQUISITION</td>
-      <td>2799362</td>
-      <td>3646071.0</td>
-      <td>604483.0</td>
-      <td>LA JOLLA</td>
-      <td>CA</td>
-      <td>0.767775</td>
-    </tr>
-    <tr>
-      <th>2408</th>
-      <td>2188.0</td>
-      <td>FAR WEST SAVINGS &amp; LOAN</td>
-      <td>SAVINGS ASSOCIATION</td>
-      <td>FEDERAL/STATE</td>
-      <td>NEWPORT BEACH, CA</td>
-      <td>1991-01-11</td>
-      <td>RTC</td>
-      <td>28292.0</td>
-      <td>ACQUISITION</td>
-      <td>2981632</td>
-      <td>3714988.0</td>
-      <td>498684.0</td>
-      <td>NEWPORT BEACH</td>
-      <td>CA</td>
-      <td>0.802595</td>
-    </tr>
-    <tr>
-      <th>3102</th>
-      <td>10134.0</td>
-      <td>CALIFORNIA NATIONAL BANK</td>
+      <th>1377</th>
+      <td>2846.0</td>
+      <td>FIRST REPUBLICBANK-DALLAS, N.A.</td>
       <td>COMMERCIAL BANK</td>
       <td>FEDERAL</td>
-      <td>LOS ANGELES, CA</td>
-      <td>2009-10-30</td>
-      <td>DIF</td>
-      <td>34659.0</td>
+      <td>DALLAS, TX</td>
+      <td>1988-07-29</td>
+      <td>FDIC</td>
+      <td>3165.0</td>
       <td>ACQUISITION</td>
-      <td>6145207</td>
-      <td>7781100.0</td>
-      <td>413527.0</td>
-      <td>LOS ANGELES</td>
-      <td>CA</td>
-      <td>0.789761</td>
+      <td>7680063</td>
+      <td>17085655.0</td>
+      <td>2017459.0</td>
+      <td>DALLAS</td>
+      <td>TX</td>
+      <td>0.449504</td>
     </tr>
     <tr>
-      <th>3124</th>
-      <td>10161.0</td>
-      <td>IMPERIAL CAPITAL BANK</td>
+      <th>2363</th>
+      <td>2124.0</td>
+      <td>SAN JACINTO SAVINGS</td>
+      <td>SAVINGS ASSOCIATION</td>
+      <td>FEDERAL/STATE</td>
+      <td>HOUSTON, TX</td>
+      <td>1990-11-30</td>
+      <td>RTC</td>
+      <td>31058.0</td>
+      <td>ACQUISITION</td>
+      <td>2894745</td>
+      <td>2869629.0</td>
+      <td>1700654.0</td>
+      <td>HOUSTON</td>
+      <td>TX</td>
+      <td>1.008752</td>
+    </tr>
+    <tr>
+      <th>1506</th>
+      <td>7070.0</td>
+      <td>GILL SA</td>
+      <td>SAVINGS ASSOCIATION</td>
+      <td>FEDERAL/STATE</td>
+      <td>SAN ANTONIO, TX</td>
+      <td>1989-02-07</td>
+      <td>RTC</td>
+      <td>31503.0</td>
+      <td>ACQUISITION</td>
+      <td>1448432</td>
+      <td>1207294.0</td>
+      <td>1659803.0</td>
+      <td>SAN ANTONIO</td>
+      <td>TX</td>
+      <td>1.199734</td>
+    </tr>
+    <tr>
+      <th>1618</th>
+      <td>7335.0</td>
+      <td>COMMONWEALTH SAVINGS ASSOC.</td>
+      <td>SAVINGS ASSOCIATION</td>
+      <td>FEDERAL/STATE</td>
+      <td>HOUSTON, TX</td>
+      <td>1989-03-09</td>
+      <td>RTC</td>
+      <td>31896.0</td>
+      <td>TRANSFER</td>
+      <td>1608452</td>
+      <td>1647893.0</td>
+      <td>1613353.0</td>
+      <td>HOUSTON</td>
+      <td>TX</td>
+      <td>0.976066</td>
+    </tr>
+    <tr>
+      <th>1714</th>
+      <td>2985.0</td>
+      <td>MBANK DALLAS, NATIONAL ASSOCIATION</td>
       <td>COMMERCIAL BANK</td>
-      <td>STATE</td>
-      <td>LA JOLLA, CA</td>
-      <td>2009-12-18</td>
-      <td>DIF</td>
-      <td>26348.0</td>
+      <td>FEDERAL</td>
+      <td>DALLAS, TX</td>
+      <td>1989-03-28</td>
+      <td>FDIC</td>
+      <td>3163.0</td>
       <td>ACQUISITION</td>
-      <td>2822300</td>
-      <td>4046888.0</td>
-      <td>328347.0</td>
-      <td>LA JOLLA</td>
-      <td>CA</td>
-      <td>0.697400</td>
+      <td>4033803</td>
+      <td>6556056.0</td>
+      <td>1610809.0</td>
+      <td>DALLAS</td>
+      <td>TX</td>
+      <td>0.615279</td>
     </tr>
     <tr>
-      <th>2985</th>
-      <td>10024.0</td>
-      <td>PFF BANK &amp; TRUST</td>
-      <td>SAVINGS BANK</td>
-      <td>STATE</td>
-      <td>POMONA, CA</td>
-      <td>2008-11-21</td>
-      <td>DIF</td>
-      <td>28344.0</td>
+      <th>1517</th>
+      <td>6952.0</td>
+      <td>BRIGHT BANC</td>
+      <td>SAVINGS ASSOCIATION</td>
+      <td>FEDERAL/STATE</td>
+      <td>DALLAS, TX</td>
+      <td>1989-02-10</td>
+      <td>RTC</td>
+      <td>31095.0</td>
       <td>ACQUISITION</td>
-      <td>2393845</td>
-      <td>3715433.0</td>
-      <td>318123.0</td>
-      <td>POMONA</td>
-      <td>CA</td>
-      <td>0.644298</td>
+      <td>3004443</td>
+      <td>4388466.0</td>
+      <td>1307798.0</td>
+      <td>DALLAS</td>
+      <td>TX</td>
+      <td>0.684623</td>
+    </tr>
+    <tr>
+      <th>1823</th>
+      <td>2100.0</td>
+      <td>VICTORIA SA</td>
+      <td>SAVINGS ASSOCIATION</td>
+      <td>FEDERAL/STATE</td>
+      <td>SAN ANTONIO, TX</td>
+      <td>1989-06-29</td>
+      <td>RTC</td>
+      <td>29378.0</td>
+      <td>PAYOUT</td>
+      <td>855717</td>
+      <td>882849.0</td>
+      <td>968972.0</td>
+      <td>SAN ANTONIO</td>
+      <td>TX</td>
+      <td>0.969268</td>
+    </tr>
+    <tr>
+      <th>1627</th>
+      <td>2104.0</td>
+      <td>BANCPLUS SAVINGS ASSOCIATION</td>
+      <td>SAVINGS ASSOCIATION</td>
+      <td>FEDERAL/STATE</td>
+      <td>PASADENA, TX</td>
+      <td>1989-03-09</td>
+      <td>RTC</td>
+      <td>31128.0</td>
+      <td>ACQUISITION</td>
+      <td>923026</td>
+      <td>751461.0</td>
+      <td>964160.0</td>
+      <td>PASADENA</td>
+      <td>TX</td>
+      <td>1.228309</td>
+    </tr>
+    <tr>
+      <th>1619</th>
+      <td>7429.0</td>
+      <td>BENJAMIN FRANKLIN SA</td>
+      <td>SAVINGS ASSOCIATION</td>
+      <td>FEDERAL/STATE</td>
+      <td>HOUSTON, TX</td>
+      <td>1989-03-09</td>
+      <td>RTC</td>
+      <td>30761.0</td>
+      <td>ACQUISITION</td>
+      <td>2004722</td>
+      <td>2641392.0</td>
+      <td>882240.0</td>
+      <td>HOUSTON</td>
+      <td>TX</td>
+      <td>0.758964</td>
     </tr>
   </tbody>
 </table>
@@ -329,7 +347,7 @@ df[df["State"] == " CA"].sort_values(by = "Estimated Loss (2015)", ascending = F
 
 
 ```python
-df.groupby("City").count()["Failure Date"].sort_values(ascending=False)[1:25].plot(kind="bar")
+df.groupby("City").count()["Failure Date"].sort_values(ascending=False)[0:25].plot(kind="bar")
 plt.ylabel("Total Failures")
 plt.show()
 ```
@@ -340,7 +358,7 @@ plt.show()
 
 
 ```python
-df.groupby("State").mean()["D/A"].sort_values(ascending=False)[1:50].plot(kind="bar")
+df.groupby("State").mean()["D/A"].sort_values(ascending=False)[0:50].plot(kind="bar")
 plt.ylabel("Mean Deposit to Asset Ratio")
 plt.show()
 ```
@@ -373,7 +391,4 @@ plt.show()
 
 
 ![png](/img/fdic_16_0.png)
-
-
-
 
