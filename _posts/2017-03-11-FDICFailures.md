@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Analysis of FDIC Failures Data"
+title:      "Exploration of FDIC Failures Data"
 subtitle:   ""
 date:       2017-03-11 12:00:00
 author:     "Clint Howard"
@@ -12,7 +12,7 @@ tags: [jekyll, python]
 
 
 # Investigation of Bank Failures
-Data provided from Kaggle: https://www.kaggle.com/fdic/bank-failures
+Data provided from FDIC via Kaggle: https://www.kaggle.com/fdic/bank-failures
 
 
 ```python
