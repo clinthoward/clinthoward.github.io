@@ -2,7 +2,7 @@
 layout:     post
 title:      "Analysis of FDIC Failures Data"
 subtitle:   ""
-date:       2017-03-12 12:00:00
+date:       2017-03-11 12:00:00
 author:     "Clint Howard"
 header-img: "img/post-bg-06.jpg"
 category: Data
