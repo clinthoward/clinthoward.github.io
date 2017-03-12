@@ -6,7 +6,7 @@ date:       2017-03-11 12:00:00
 author:     "Clint Howard"
 header-img: "img/post-bg-06.jpg"
 category: Portfolio
-tags: [jekyll, python, data]
+tags: [jekyll, python]
 ---
 
 
