@@ -16,7 +16,12 @@ page.comments: True
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
-                </div>
+                    <ul class="tags">
+			  {% for tag in page.tags %}
+			    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+			  {% endfor %}
+	           </ul>
+		    </div>
             </div>
         </div>
     </div>
@@ -35,11 +40,7 @@ page.comments: True
 		<script type="text/javascript" async
  		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
  		</script>
-		    <ul class="tags">
-			  {% for tag in page.tags %}
-			    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
-			  {% endfor %}
-			</ul>
+
 				{{ content }}
 
                 <hr>
