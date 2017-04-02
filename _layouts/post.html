@@ -23,11 +23,7 @@ page.comments: True
 </header>
 
 <!-- Post Content -->
-<ul class="tags">
-  {% for tag in page.tags %}
-    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
-  {% endfor %}
-</ul>
+
 
 <article>
     <div class="container">
@@ -39,6 +35,11 @@ page.comments: True
 		<script type="text/javascript" async
  		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
  		</script>
+		    <ul class="tags">
+			  {% for tag in page.tags %}
+			    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+			  {% endfor %}
+			</ul>
 				{{ content }}
 
                 <hr>
