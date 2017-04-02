@@ -14,7 +14,7 @@ linkedin_username: clint-howard-5a29b927
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
- google_tracking_id: UA-85406922-1
+google_tracking_id: UA-85406922-1
 
 author :
   name : Clint Howard
