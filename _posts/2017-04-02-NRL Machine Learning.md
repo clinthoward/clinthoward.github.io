@@ -15,7 +15,7 @@ comments: True
 
 
 # Analysis of NRL Data
-Extension of work from [Fisadev](https://github.com/fisadev/world_cup_learning) (utility functions used are derived from previous NB) but utilising Keras and NRL data. Stll a work in progress..
+Extension of work from [Fisadev](https://github.com/fisadev/world_cup_learning) (utility functions used are derived from previous NB) but utilising Keras and NRL data. Still a work in progress..
 
 
 [Jupyer Notebook](https://github.com/clinthoward/clinthoward.github.io/blob/master/JupyterNB/NRL%20Analysis.ipynb)
