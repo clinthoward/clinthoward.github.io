@@ -3,7 +3,7 @@ layout: page
 title: Archive
 permalink: /sitearchive/
 sitemap: false
-header-img: "img/early_sunrise-wide.jpg"
+header-img: "img/blur1copy.png"
 Order: 2
 ---
 
