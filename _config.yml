@@ -33,3 +33,17 @@ gems: [jekyll-paginate, jekyll-feed]
 
 layout: default
 comments: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_categories
+    values:
+      layout: blog_by_category
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: blog_by_tag
