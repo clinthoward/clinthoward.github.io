@@ -663,6 +663,6 @@ print(predict(2015, "Penrith Panthers", "Sydney Roosters"))
     
 
 ## 10. Extra Areas to Explore
-
+It's obvious that the implementations above are fairly basic, and are mainly just for showing how to apply the techniques. There are many extra areas to explore, particularly around feature analysis and understanding of what features would actually drive predictions. We could perhaps incorporate things like points scored ratios, average point differentials, number of representative level players etc. The largest gains would probably come from incorporating some of the betting statistics which are available, based on head-to-head odds.
 
 
