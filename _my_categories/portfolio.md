@@ -1,6 +1,0 @@
-----		
--layout: default		
--slug: Portfolio		
--name: Portfolio		
--whatever: summary		
-----
