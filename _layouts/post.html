@@ -53,6 +53,12 @@ page.comments: True
     </div>
 </article>
 
+<ul class="tags">
+  {% for tag in page.tags %}
+    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
+
 <hr>
 {% if page.comments %}
 <div id="disqus_thread"></div>
@@ -79,8 +85,3 @@ page.comments: True
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
 
-<ul class="tags">
-  {% for tag in page.tags %}
-    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
-  {% endfor %}
-</ul>
