@@ -18,9 +18,8 @@ comments: True
 Extension of work from [Fisadev](https://github.com/fisadev/world_cup_learning) (utility functions used are derived from previous NB) but utilising Keras and NRL data. Still a work in progress..
 
 
-[Jupyer Notebook](https://github.com/clinthoward/clinthoward.github.io/blob/master/JupyterNB/NRL%20Analysis.ipynb)
-[NRL Matches Data](https://github.com/clinthoward/clinthoward.github.io/blob/master/JupyterNB/nrl_raw_matches.csv)
-[NRL Winners Data](https://github.com/clinthoward/clinthoward.github.io/blob/master/JupyterNB/nrl_raw_winners.csv)
+[Raw Data and Jupyter Notebook](https://github.com/clinthoward/Blog-Notebooks/tree/master/NRL)
+
 
 ## 1. Libraries
 
