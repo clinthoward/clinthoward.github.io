@@ -446,8 +446,8 @@ body {
 .tag::after {
   background: #fff;
   border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
-  border-top: 13px solid transparent;
+  border-left: 4px solid #eee;
+  border-top: 4px solid transparent;
   content: '';
   position: absolute;
   right: 0;
