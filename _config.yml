@@ -35,7 +35,7 @@ layout: default
 comments: true
 
 defaults:
--
+  -
     scope:
       path: ""
       type: my_categories
