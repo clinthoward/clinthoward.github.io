@@ -2,11 +2,7 @@
 layout: default
 page.comments: True
 ---
-<ul class="tags">
-  {% for tag in page.tags %}
-    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
-  {% endfor %}
-</ul>
+
 
 <!-- Post Header -->
 
@@ -27,6 +23,12 @@ page.comments: True
 </header>
 
 <!-- Post Content -->
+<ul class="tags">
+  {% for tag in page.tags %}
+    <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
+
 <article>
     <div class="container">
         <div class="row">
