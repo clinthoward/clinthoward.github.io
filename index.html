@@ -6,13 +6,14 @@ order: 1
 ---
 
 {% for post in site.categories.Portfolio %}
-<ul class="tags">
+
+<div class="post-preview">
+  <ul class="tags">
 {% for tag in post.tags %}
   <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
 {% endfor %}
 </ul>
 
-<div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
         </h2>
