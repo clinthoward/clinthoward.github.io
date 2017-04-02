@@ -8,11 +8,7 @@ order: 1
 {% for post in site.categories.Portfolio %}
 
 <div class="post-preview">
-  <ul class="tags">
-{% for tag in post.tags %}
-  <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
-{% endfor %}
-</ul>
+
 
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
@@ -24,6 +20,12 @@ order: 1
         {% endif %}
     </a>
     <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+  <ul class="tags">
+{% for tag in post.tags %}
+  <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+{% endfor %}
+</ul>
+  
 </div>
 <hr>
 {% endfor %}
