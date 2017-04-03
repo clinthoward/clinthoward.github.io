@@ -541,7 +541,7 @@ We see that our prediction model doesn't do that well, only just beating out a 5
 
 ## 7. Neural Nets
 
-We can also explore the use of Keras here. We will use a very basic approach and give some demonstrative examples of how to apply Keras to this type of data.
+We can also explore the use of Keras here. We will use a very basic approach and give some demonstrative examples of how to apply Keras to this type of data. We'll use a variety of basictechniques to demonstrate a basic Keras workflow with cross-validation.
 
 
 ```python
@@ -559,7 +559,7 @@ X = np.array(inputs)
 y = np.array(outputs).astype(float)
 y[y == 2] = 0 # We treat 2 as a loss, 1 as a win. Normalise this so that 0 = loss, 1 = win.
 
-kfold = StratifiedKFold(n_splits=10) # Kfold cross-validation, see [here](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation)
+kfold = StratifiedKFold(n_splits=10) # Kfold cross-validation
 cvscores = [] # A store of cross-validation scores for each iteration of kfold
 history = [] # A store of the keras history 
 ```
@@ -599,7 +599,7 @@ for train, test in kfold.split(X, y):
     acc: 59.75%
     
 
-As expected, the results aren't significantly improved on what we obtained with SVC and RF. Rather, we see that we typically see results in the range of 50-60%. Using this validation, we can now fit a model and draw some conclusions.
+As expected, the results aren't significantly improved on what we obtained with SVC and RF. Rather, we see that we typically see results in the range of 50-60%. Using this validation, we can now fit a model and draw some conclusions. [Keras Documentation](https://keras.io/getting-started/sequential-model-guide/) is quite handy...
 
 
 ```python
