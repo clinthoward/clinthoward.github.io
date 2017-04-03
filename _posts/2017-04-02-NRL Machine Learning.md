@@ -506,7 +506,7 @@ train_inputs, train_outputs, test_inputs, test_outputs = split_samples(inputs, o
 
 ```
 
-###### 6. Basic Models 
+## 6. Basic Models 
 
 
 ```python
@@ -539,7 +539,7 @@ print("Logistic Score: ", clf_logistic.score(test_inputs, test_outputs))
 
 We see that our prediction model doesn't do that well, only just beating out a 50% probability. This premise is likely falling out from the lack of data available and the relatively small sample size being used.
 
-## 8. Neural Nets
+## 7. Neural Nets
 
 We can also explore the use of Keras here. We will use a very basic approach and give some demonstrative examples of how to apply Keras to this type of data.
 
@@ -646,7 +646,7 @@ model.summary()
     ____________________________________________________________________________________________________
     
 
-## 9. Application to Prediction
+## 8. Application to Prediction
 
 
 
