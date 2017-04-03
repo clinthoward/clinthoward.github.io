@@ -559,25 +559,29 @@ X = np.array(inputs)
 y = np.array(outputs).astype(float)
 y[y == 2] = 0 # We treat 2 as a loss, 1 as a win. Normalise this so that 0 = loss, 1 = win.
 
-kfold = StratifiedKFold(n_splits=10)
-cvscores = []
-history = []
+kfold = StratifiedKFold(n_splits=10) # Kfold cross-validation, see [here](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation)
+cvscores = [] # A store of cross-validation scores for each iteration of kfold
+history = [] # A store of the keras history 
 ```
 
 
 ```python
 for train, test in kfold.split(X, y):
-  # create model
+
+  # Create sequential model which is basically a stack of linear neural layers.
     model = Sequential()
     model.add(Dense(12, activation='relu',input_dim=len(input_features) ))
     model.add(Dense(8, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
-    # Compile model
+    
+    # Compile model using stochastic gradient descent optimiser and binary crossentropy loss scoring.
     opt = SGD(lr=0.001) 
     model.compile(loss = "binary_crossentropy", optimizer = opt, metrics = ["accuracy"])
-    # Fit the model
+    
+    # Fit the model to training data
     history.append(model.fit(X[train], y[train], nb_epoch=150, batch_size=128, verbose=0))
-    # evaluate the model
+    
+    # Evaluate model against testing data
     scores = model.evaluate(X[test], y[test], verbose=0)
     print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
     cvscores.append(scores[1] * 100)
@@ -601,19 +605,21 @@ As expected, the results aren't significantly improved on what we obtained with 
 ```python
 history = model.fit(X, y, validation_split=0.33, nb_epoch=500, batch_size=128, verbose=0)
 
+# Plot the accuracy of the train/test splits for each epoch. 
 plt.plot(history.history['acc'])
 plt.plot(history.history['val_acc'])
-plt.title('model accuracy')
-plt.ylabel('accuracy')
-plt.xlabel('epoch')
+plt.title('Model Accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
 
+# Plot the loss of the train/test splits for each epoch
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
-plt.title('model loss')
-plt.ylabel('loss')
-plt.xlabel('epoch')
+plt.title('Model Loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
 plt.legend(['train', 'test'], loc='upper left')
 plt.show()
 ```
