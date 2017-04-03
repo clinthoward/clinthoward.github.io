@@ -350,9 +350,15 @@ def get_team_stats():
         # wins where the team was  the away side (team2)
         wins2 = team_matches[(team_matches.team2 == team) & (team_matches.score2 > team_matches.score1)]
         
-        stats.loc[team, "draws"] = len(team_matches[(team_matches.team1 == team) & (team_matches.score2 == team_matches.score1)]) + len(team_matches[(team_matches.team1 == team) & (team_matches.score2 == team_matches.score1)])
-        stats.loc[team, "points_scored"] = sum(matches[matches.team1 == team].iloc[:,2]) + sum( matches[matches.team2 == team].iloc[:,3] )
-        stats.loc[team, "points_conceded"] = sum(matches[matches.team1 == team].iloc[:,3]) + sum( matches[matches.team2 == team].iloc[:,2] )           
+        stats.loc[team, "draws"] = len(team_matches[(team_matches.team1 == team) & 
+        (team_matches.score2 == team_matches.score1)]) + len(team_matches[(team_matches.team1 == team) & 
+        (team_matches.score2 == team_matches.score1)])
+        
+        stats.loc[team, "points_scored"] = sum(matches[matches.team1 == team].iloc[:,2]) + 
+        sum( matches[matches.team2 == team].iloc[:,3] )
+        
+        stats.loc[team, "points_conceded"] = sum(matches[matches.team1 == team].iloc[:,3]) + 
+                                            sum( matches[matches.team2 == team].iloc[:,2] )           
         stats.loc[team, 'matches_won'] = len(wins1) + len(wins2)
         stats.loc[team, 'years_played'] = len(team_matches.year.unique())
         
@@ -407,7 +413,7 @@ plt.show()
 ```
 
 
-![png](output_19_0.png)
+![png](/img/nrl_19_0.png)
 
 
 What the below graphs show are the point differentials. Clearly Melbourn Storm struggle on the road, but dominate at home. Leading into the Melbourn Storm home ground guru.
