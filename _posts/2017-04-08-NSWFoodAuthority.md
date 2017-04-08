@@ -14,6 +14,7 @@ comments: True
 
 There's been some recent noise around the NSW Department of Primary Industries Food Authority's naming and shaming of restaurants [here](http://www.foodauthority.nsw.gov.au/penalty-notices/default.aspx?template=results). As you can see, there's a nice embedded table so let's so how we can scrape out this information and do some exploration.
 
+[Juypter notebooks and data](https://github.com/clinthoward/Blog-Notebooks/tree/master/NSW%20Food%20Authority)
 
 ```python
 from bs4 import BeautifulSoup
