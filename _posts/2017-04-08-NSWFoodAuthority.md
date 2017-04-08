@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Scraping and Exploration of NSW Food Authority Penalty Notices"
-subtitle:   ""
+subtitle:   "We implement a web scraper to obtain some NSW Government data and then proceed to find out which areas and which businesses are the worst serial offenders."
 date:       2017-04-08 12:00:00
 author:     "Clint Howard"
 category: Portfolio
