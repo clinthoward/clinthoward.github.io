@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Exploration of FDIC Failures Data"
-subtitle:   ""
+subtitle:   "We look at historical bank failures in the USA, and identify some key temporal trends as well as location based trends. We then kick-off a basic look at what metrics might drive these failures."
 date:       2017-03-11 12:00:00
 author:     "Clint Howard"
 header-img: "/img/post-bg-06.jpg"
