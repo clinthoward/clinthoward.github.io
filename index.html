@@ -4,25 +4,26 @@ description: ""
 header-img: "img/blur1copy.png"
 order: 1
 ---
-
-{% for post in site.categories.Portfolio %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <div class="post-preview">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+          <h2 class="post-title">           
+            {{ post.title }}
+          </h2>
+          {% if post.subtitle %}
+          <h3 class="post-subtitle">
             {{ post.subtitle }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
+          </h3>
+          {% endif %}
+      </a>
+      <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+  </div>
+  <hr>
 {% endfor %}
 
-
 <!-- Pager -->
+<div class="pagination">
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
@@ -37,3 +38,5 @@ order: 1
     {% endif %}
 </ul>
 {% endif %}
+ </div>
+

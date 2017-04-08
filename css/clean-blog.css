@@ -236,6 +236,8 @@ hr.small {
   margin-bottom: 10px;
 }
 .post-preview > a > .post-subtitle {
+  color: #777777;
+  font-size: 18px;
   margin: 0;
   font-weight: 300;
   margin-bottom: 10px;
