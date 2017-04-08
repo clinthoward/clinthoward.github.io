@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Exploration and Prediction on NRL Data"
-subtitle:   ""
+subtitle:   "We build first explore some NRL data, and then attempt to use some basic features in a machine learning framework. Our ultimate goal is to use match results to predict future results."
 date:       2017-04-02 12:00:00
 author:     "Clint Howard"
 header-img: "/img/post-bg-06.jpg"
