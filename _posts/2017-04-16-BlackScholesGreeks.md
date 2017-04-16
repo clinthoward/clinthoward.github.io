@@ -668,6 +668,9 @@ plt.show()
 ![png](/img/blackscholes_20_0.png)
 
 
-## References
+## References/Interesting Stuff
 * https://github.com/yhilpisch/dawp
 * http://www.smileofthales.com/options-greeks-python/
+* http://www.maths.usyd.edu.au/u/UG/SM/MATH3075/r/Haug_Taleb_2011.pdf
+* https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf
+
