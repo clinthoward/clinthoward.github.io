@@ -13,17 +13,17 @@ comments: True
 
 A Python friendly intro to options. We'll have a look at creating some option payoff functions, an implementation of Black-Scholes pricing and then finish up with some sensitivity analysis (Greeks). I'll provide a fairly high level overview of what we're doing, but some basic knowledge in options is always good (Google is your friend). I'm by no means an expert in options, but find that implementing them in Python is good practice in some fundamental skills like list manipulations, maps, plotting and taking it one step further into object-oriented programming.
 
-\begin{equation*}
+\begin{array}{c}
 \frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2S^2\frac{\partial V^2}{\partial S^2} + rS\frac{\partial V}{\partial S} - rV = 0
-\end{equation*}
+\end{array}
 
 Perhaps the most famous and possibly infamous equation in quantitative finance is the Black-Scholes equation. A PDE which provides the time evolving price of a vanilla option, specifically European put and call options. 
 
 The equation can be solved, to yield a fairly simple closed-form solution for an option price for a non-dividend underlying (and a whole bunch of other assumptions such as efficient markets, no transaction costs etc.). 
 
-\begin{equation*}
+\begin{array}{c}
 C(S_t, t) = N(d_1)S_t - N(d_2)Ke^{-r(T-t)}
-\end{equation*}
+\end{array}
 
 With 
 \begin{array}{c}
