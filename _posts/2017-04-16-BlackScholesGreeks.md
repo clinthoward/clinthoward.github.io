@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Option Payoffs, Black-Scholes and the Greeks."
+title:      "Option Payoffs, Black-Scholes and the Greeks"
 subtitle:   "An exploration of the Black-Scholes framework. A variety of plotting tools are developed for plotting pay-off functions and option Greeks."
 date:       2017-04-16 12:00:00
 author:     "Clint Howard"
@@ -8,6 +8,7 @@ category: Portfolio
 tags: [python, data, finance]
 comments: True
 ---
+
 # Black-Scholes and the Greeks. 
 
 A Python friendly intro to options. We'll have a look at creating some option payoff functions, an implementation of Black-Scholes pricing and then finish up with some sensitivity analysis (Greeks). I'll provide a fairly high level overview of what we're doing, but some basic knowledge in options is always good (Google is your friend). I'm by no means an expert in options, but find that implementing them in Python is good practice in some fundamental skills like list manipulations, maps, plotting and taking it one step further into object-oriented programming.
@@ -36,7 +37,7 @@ The above equation can be interpreted as the call option premium is the differen
 
 Check out [here](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model) for a basic introduction and links to all the relevant source material.
 
-The above formulae, as well as some derivatives provide all we'll need to explore the Black Scholes framework for vanilla puts/calls as well as their sensitivies to underyling paramters (the Greeks).
+The above formulae, as well as some derivatives provide all we'll need to explore the Black Scholes framework for vanilla puts/calls as well as their sensitivies to underlying paramteers (the Greeks).
 
 ## Implementation of Formula
 
@@ -56,12 +57,315 @@ Basic Concepts/Definitions:
 
 
 ```python
+plt.rcParams.keys
+```
+
+
+
+
+    <bound method RcParams.keys of RcParams({'agg.path.chunksize': 0,
+              'animation.avconv_args': [],
+              'animation.avconv_path': 'avconv',
+              'animation.bitrate': -1,
+              'animation.codec': 'mpeg4',
+              'animation.convert_args': [],
+              'animation.convert_path': 'convert',
+              'animation.ffmpeg_args': [],
+              'animation.ffmpeg_path': 'ffmpeg',
+              'animation.frame_format': 'png',
+              'animation.html': 'none',
+              'animation.mencoder_args': [],
+              'animation.mencoder_path': 'mencoder',
+              'animation.writer': 'ffmpeg',
+              'axes.axisbelow': True,
+              'axes.edgecolor': 'white',
+              'axes.facecolor': '#E5E5E5',
+              'axes.formatter.limits': [-7, 7],
+              'axes.formatter.use_locale': False,
+              'axes.formatter.use_mathtext': False,
+              'axes.formatter.useoffset': True,
+              'axes.grid': True,
+              'axes.grid.axis': 'both',
+              'axes.grid.which': 'major',
+              'axes.hold': True,
+              'axes.labelcolor': '#555555',
+              'axes.labelpad': 5.0,
+              'axes.labelsize': 'large',
+              'axes.labelweight': 'normal',
+              'axes.linewidth': 1.0,
+              'axes.prop_cycle': cycler('color', ['#E24A33', '#348ABD', '#988ED5', '#777777', '#FBC15E', '#8EBA42', '#FFB5B8']),
+              'axes.spines.bottom': True,
+              'axes.spines.left': True,
+              'axes.spines.right': True,
+              'axes.spines.top': True,
+              'axes.titlesize': 'x-large',
+              'axes.titleweight': 'normal',
+              'axes.unicode_minus': True,
+              'axes.xmargin': 0.0,
+              'axes.ymargin': 0.0,
+              'axes3d.grid': True,
+              'backend': 'module://ipykernel.pylab.backend_inline',
+              'backend.qt4': 'PyQt4',
+              'backend.qt5': 'PyQt5',
+              'backend_fallback': True,
+              'boxplot.bootstrap': None,
+              'boxplot.boxprops.color': 'b',
+              'boxplot.boxprops.linestyle': '-',
+              'boxplot.boxprops.linewidth': 1.0,
+              'boxplot.capprops.color': 'k',
+              'boxplot.capprops.linestyle': '-',
+              'boxplot.capprops.linewidth': 1.0,
+              'boxplot.flierprops.color': 'b',
+              'boxplot.flierprops.linestyle': 'none',
+              'boxplot.flierprops.linewidth': 1.0,
+              'boxplot.flierprops.marker': '+',
+              'boxplot.flierprops.markeredgecolor': 'k',
+              'boxplot.flierprops.markerfacecolor': 'b',
+              'boxplot.flierprops.markersize': 6.0,
+              'boxplot.meanline': False,
+              'boxplot.meanprops.color': 'r',
+              'boxplot.meanprops.linestyle': '-',
+              'boxplot.meanprops.linewidth': 1.0,
+              'boxplot.medianprops.color': 'r',
+              'boxplot.medianprops.linestyle': '-',
+              'boxplot.medianprops.linewidth': 1.0,
+              'boxplot.notch': False,
+              'boxplot.patchartist': False,
+              'boxplot.showbox': True,
+              'boxplot.showcaps': True,
+              'boxplot.showfliers': True,
+              'boxplot.showmeans': False,
+              'boxplot.vertical': True,
+              'boxplot.whiskerprops.color': 'b',
+              'boxplot.whiskerprops.linestyle': '--',
+              'boxplot.whiskerprops.linewidth': 1.0,
+              'boxplot.whiskers': 1.5,
+              'contour.corner_mask': True,
+              'contour.negative_linestyle': 'dashed',
+              'datapath': 'C:\\Users\\Clint_PC\\Anaconda3\\lib\\site-packages\\matplotlib\\mpl-data',
+              'docstring.hardcopy': False,
+              'errorbar.capsize': 3.0,
+              'examples.directory': '',
+              'figure.autolayout': False,
+              'figure.dpi': 72.0,
+              'figure.edgecolor': '0.50',
+              'figure.facecolor': 'white',
+              'figure.figsize': [6.0, 4.0],
+              'figure.frameon': True,
+              'figure.max_open_warning': 20,
+              'figure.subplot.bottom': 0.125,
+              'figure.subplot.hspace': 0.2,
+              'figure.subplot.left': 0.125,
+              'figure.subplot.right': 0.9,
+              'figure.subplot.top': 0.9,
+              'figure.subplot.wspace': 0.2,
+              'figure.titlesize': 'medium',
+              'figure.titleweight': 'normal',
+              'font.cursive': ['Apple Chancery',
+                               'Textile',
+                               'Zapf Chancery',
+                               'Sand',
+                               'Script MT',
+                               'Felipa',
+                               'cursive'],
+              'font.family': ['sans-serif'],
+              'font.fantasy': ['Comic Sans MS',
+                               'Chicago',
+                               'Charcoal',
+                               'ImpactWestern',
+                               'Humor Sans',
+                               'fantasy'],
+              'font.monospace': ['Bitstream Vera Sans Mono',
+                                 'DejaVu Sans Mono',
+                                 'Andale Mono',
+                                 'Nimbus Mono L',
+                                 'Courier New',
+                                 'Courier',
+                                 'Fixed',
+                                 'Terminal',
+                                 'monospace'],
+              'font.sans-serif': ['Bitstream Vera Sans',
+                                  'DejaVu Sans',
+                                  'Lucida Grande',
+                                  'Verdana',
+                                  'Geneva',
+                                  'Lucid',
+                                  'Arial',
+                                  'Helvetica',
+                                  'Avant Garde',
+                                  'sans-serif'],
+              'font.serif': ['Bitstream Vera Serif',
+                             'DejaVu Serif',
+                             'New Century Schoolbook',
+                             'Century Schoolbook L',
+                             'Utopia',
+                             'ITC Bookman',
+                             'Bookman',
+                             'Nimbus Roman No9 L',
+                             'Times New Roman',
+                             'Times',
+                             'Palatino',
+                             'Charter',
+                             'serif'],
+              'font.size': 10.0,
+              'font.stretch': 'normal',
+              'font.style': 'normal',
+              'font.variant': 'normal',
+              'font.weight': 'normal',
+              'grid.alpha': 1.0,
+              'grid.color': 'white',
+              'grid.linestyle': '-',
+              'grid.linewidth': 0.5,
+              'image.aspect': 'equal',
+              'image.cmap': 'jet',
+              'image.composite_image': True,
+              'image.interpolation': 'bilinear',
+              'image.lut': 256,
+              'image.origin': 'upper',
+              'image.resample': False,
+              'interactive': False,
+              'keymap.all_axes': ['a'],
+              'keymap.back': ['left', 'c', 'backspace'],
+              'keymap.forward': ['right', 'v'],
+              'keymap.fullscreen': ['f', 'ctrl+f'],
+              'keymap.grid': ['g'],
+              'keymap.home': ['h', 'r', 'home'],
+              'keymap.pan': ['p'],
+              'keymap.quit': ['ctrl+w', 'cmd+w'],
+              'keymap.save': ['s', 'ctrl+s'],
+              'keymap.xscale': ['k', 'L'],
+              'keymap.yscale': ['l'],
+              'keymap.zoom': ['o'],
+              'legend.borderaxespad': 0.5,
+              'legend.borderpad': 0.4,
+              'legend.columnspacing': 2.0,
+              'legend.edgecolor': 'inherit',
+              'legend.facecolor': 'inherit',
+              'legend.fancybox': False,
+              'legend.fontsize': 'large',
+              'legend.framealpha': None,
+              'legend.frameon': True,
+              'legend.handleheight': 0.7,
+              'legend.handlelength': 2.0,
+              'legend.handletextpad': 0.8,
+              'legend.isaxes': True,
+              'legend.labelspacing': 0.5,
+              'legend.loc': 'upper right',
+              'legend.markerscale': 1.0,
+              'legend.numpoints': 2,
+              'legend.scatterpoints': 3,
+              'legend.shadow': False,
+              'lines.antialiased': True,
+              'lines.color': 'b',
+              'lines.dash_capstyle': 'butt',
+              'lines.dash_joinstyle': 'round',
+              'lines.linestyle': '-',
+              'lines.linewidth': 1.0,
+              'lines.marker': 'None',
+              'lines.markeredgewidth': 0.5,
+              'lines.markersize': 6.0,
+              'lines.solid_capstyle': 'projecting',
+              'lines.solid_joinstyle': 'round',
+              'markers.fillstyle': 'full',
+              'mathtext.bf': 'serif:bold',
+              'mathtext.cal': 'cursive',
+              'mathtext.default': 'it',
+              'mathtext.fallback_to_cm': True,
+              'mathtext.fontset': 'cm',
+              'mathtext.it': 'serif:italic',
+              'mathtext.rm': 'serif',
+              'mathtext.sf': 'sans\\-serif',
+              'mathtext.tt': 'monospace',
+              'nbagg.transparent': True,
+              'patch.antialiased': True,
+              'patch.edgecolor': '#EEEEEE',
+              'patch.facecolor': '#348ABD',
+              'patch.linewidth': 0.5,
+              'path.effects': [],
+              'path.simplify': True,
+              'path.simplify_threshold': 0.1111111111111111,
+              'path.sketch': None,
+              'path.snap': True,
+              'pdf.compression': 6,
+              'pdf.fonttype': 3,
+              'pdf.inheritcolor': False,
+              'pdf.use14corefonts': False,
+              'pgf.debug': False,
+              'pgf.preamble': [],
+              'pgf.rcfonts': True,
+              'pgf.texsystem': 'xelatex',
+              'plugins.directory': '.matplotlib_plugins',
+              'polaraxes.grid': True,
+              'ps.distiller.res': 6000,
+              'ps.fonttype': 3,
+              'ps.papersize': 'letter',
+              'ps.useafm': False,
+              'ps.usedistiller': False,
+              'savefig.bbox': None,
+              'savefig.directory': '~',
+              'savefig.dpi': 100.0,
+              'savefig.edgecolor': 'w',
+              'savefig.facecolor': 'w',
+              'savefig.format': 'png',
+              'savefig.frameon': True,
+              'savefig.jpeg_quality': 95,
+              'savefig.orientation': 'portrait',
+              'savefig.pad_inches': 0.1,
+              'savefig.transparent': False,
+              'svg.fonttype': 'path',
+              'svg.image_inline': True,
+              'svg.image_noscale': False,
+              'text.antialiased': True,
+              'text.color': 'k',
+              'text.dvipnghack': None,
+              'text.hinting': 'auto',
+              'text.hinting_factor': 8,
+              'text.latex.preamble': [],
+              'text.latex.preview': False,
+              'text.latex.unicode': False,
+              'text.usetex': False,
+              'timezone': 'UTC',
+              'tk.window_focus': False,
+              'toolbar': 'toolbar2',
+              'verbose.fileo': 'sys.stdout',
+              'verbose.level': 'silent',
+              'webagg.open_in_browser': True,
+              'webagg.port': 8988,
+              'webagg.port_retries': 50,
+              'xtick.color': '#555555',
+              'xtick.direction': 'out',
+              'xtick.labelsize': 14.0,
+              'xtick.major.pad': 4.0,
+              'xtick.major.size': 4.0,
+              'xtick.major.width': 0.5,
+              'xtick.minor.pad': 4.0,
+              'xtick.minor.size': 2.0,
+              'xtick.minor.visible': False,
+              'xtick.minor.width': 0.5,
+              'ytick.color': '#555555',
+              'ytick.direction': 'out',
+              'ytick.labelsize': 14.0,
+              'ytick.major.pad': 4.0,
+              'ytick.major.size': 4.0,
+              'ytick.major.width': 0.5,
+              'ytick.minor.pad': 4.0,
+              'ytick.minor.size': 2.0,
+              'ytick.minor.visible': False,
+              'ytick.minor.width': 0.5})>
+
+
+
+
+```python
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 plt.style.use('ggplot')
 plt.rcParams['xtick.labelsize'] = 14
 plt.rcParams['ytick.labelsize'] = 14
+plt.rcParams['figure.titlesize'] = 18
+plt.rcParams['figure.titleweight'] = 'medium'
+plt.rcParams['lines.linewidth'] = 2.5
 
 #### make a funcion that lets you specify a few parameters and calculates the payoff
 
@@ -117,8 +421,8 @@ def binary_put(S,K, Price):
 ```python
 S = [t/5 for t in range(0,1000)] # Define some series of stock-prices                 
 
-fig, ax = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=True, figsize=(20, 10))
-fig.suptitle('Payoff Functions for Long/Short Put/Calls', fontsize=14, fontweight='bold')
+fig, ax = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=True, figsize = (20,15))
+fig.suptitle('Payoff Functions for Long/Short Put/Calls', fontsize=20, fontweight='bold')
 fig.text(0.5, 0.04, 'Stock/Underlying Price ($)', ha='center', fontsize=14, fontweight='bold')
 fig.text(0.08, 0.5, 'Option Payoff ($)', va='center', rotation='vertical', fontsize=14, fontweight='bold')
 
@@ -158,7 +462,7 @@ plt.show()
 ```
 
 
-![png](/img/blackscholes_5_0.png)
+![png](/img/blackscholes_6_0.png)
 
 
 In addition to the standard long/short put/call options, it is possible to create a myriad of different options through combinations of these basic pieces. We'll only focus on creating different option structures that utilise different strike prices, there's a whole other world of options which also utilise different expirations (i.e. calendar spreads).
@@ -214,7 +518,7 @@ def strip(S, E1, Price1, Price2):
 
 
 ```python
-fig, ax = plt.subplots(nrows=3, ncols=2, sharex=True, sharey=True, figsize=(30, 20))
+fig, ax = plt.subplots(nrows=3, ncols=2, sharex=True, sharey=True, figsize=(30, 25))
 fig.suptitle('Payoff Functions for Long/Short Put/Calls', fontsize=20, fontweight='bold')
 fig.text(0.5, 0.08, 'Stock/Underlying Price ($)', ha='center', fontsize=18, fontweight='bold')
 fig.text(0.08, 0.5, 'Option Payoff ($)', va='center', rotation='vertical', fontsize=18, fontweight='bold')
@@ -294,7 +598,7 @@ plt.show()
 ```
 
 
-![png](/img/blackscholes_8_0.png)
+![png](/img/blackscholes_9_0.png)
 
 
 ### Implementing Black-Scholes
@@ -404,7 +708,7 @@ plt.show()
 ```
 
 
-![png](/img/blackscholes_13_0.png)
+![png](/img/blackscholes_14_0.png)
 
 
 ## Plotting Greeks
@@ -413,7 +717,7 @@ We can now look at the sensitivity of option greeks to a single parameter. I won
 
 
 ```python
-fig, ax = plt.subplots(nrows=3, ncols=2, sharex=True, sharey=True, figsize=(30, 20))
+fig, ax = plt.subplots(nrows=3, ncols=2, sharex=True, sharey=True, figsize=(40, 30))
 fig.suptitle('Sensitivity of 1st Order European Option Greeks to Strike + Underlying', fontsize=20, fontweight='bold')
 fig.text(0.5, 0.08, 'Stock/Underlying Price ($)', ha='center', fontsize=18, fontweight='bold')
 vals = [15,25,35]
@@ -486,7 +790,7 @@ plt.show()
 ```
 
 
-![png](/img/blackscholes_16_0.png)
+![png](/img/blackscholes_17_0.png)
 
 
 
@@ -565,7 +869,7 @@ plt.show()
 ```
 
 
-![png](/img/blackscholes_17_0.png)
+![png](/img/blackscholes_18_0.png)
 
 
 ## Greek Surfaces
@@ -661,7 +965,7 @@ plt.show()
 ```
 
 
-![png](/img/blackscholes_19_0.png)
+![png](/img/blackscholes_20_0.png)
 
 
 ## References
