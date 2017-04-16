@@ -48,13 +48,14 @@ Payoff functions are key to understanding the profit (and loss) that we'll recei
 For now we'll only plot some basic options and option strategies, without doing any calculations of the option prices. The option price will simply be a parameter which we feed into the payoff functions. Later, we'll return and price a European option using the above Black-Scholes method, and this will allow us to build out some more complex option strategy payoff functions with varying maturities.
 
 Basic Concepts/Definitions:
-* ITM (In-the-money): An option is ITM if it is currently "worth" exercising today i.e. for a call option the current underlying's price is greater than the strike price (and vice versa for a put).
-* OTM (Out-of-the-money): An option is OTM if it is currently "not worth" exercising today.
-* ATM (At-the-money): An option is ATM if it is neither ITM or OTM, i.e. exercising today would have no tangible effect (ignoring any transaction costs/option premiums).
-* Strike Price: This is the price at which our option is exercised at
-* Underlying: This refers to the asset (which could really be anything which has a price) which underlies the derivative contract.
+	* ITM (In-the-money): An option is ITM if it is currently "worth" exercising today i.e. for a call option the current underlying's price is greater than the strike price (and vice versa for a put).
+	* OTM (Out-of-the-money): An option is OTM if it is currently "not worth" exercising today.
+	* ATM (At-the-money): An option is ATM if it is neither ITM or OTM, i.e. exercising today would have no tangible effect (ignoring any transaction costs/option premiums).
+	* Strike Price: This is the price at which our option is exercised at
+	* Underlying: This refers to the asset (which could really be anything which has a price) which underlies the derivative contract.
 
 
+	
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -300,7 +301,7 @@ plt.show()
 ![png](/img/blackscholes_9_0.png)
 
 
-### Implementing Black-Scholes
+### Black-Scholes Equation & Greeks
 We can implement the equations we defined previously, to help us calculate the premium of an option, as well as the sensitivities of these equations to the various parameters. These sensitivities are known as "Greeks", and are obtained by taking various derivatives of the Black-Scholes equation w.r.t the underlying parameters.
 
 
@@ -389,9 +390,9 @@ def charm(S, K, r, vol, T, t, otype):
     return charm
 ```
 
-## Plotting Option Prices
+### Plotting Option Prices
 
-The first place we'll start is by looking at how the value of an option changes with stock price. Let's assume that our strike is \$50, then a put will have it's highest value to us when the stock is worth \$0 as we could buy stock at \$0 and then exercise our put option to sell for \$50. A call is the opposite, our option to buy is worth the least if the stock price is \$0 and will increase in value as the stock price increases.
+The first place we'll start is by looking at how the value of an option changes with stock price. Let's assume that our strike is 50, then a put will have it's highest value to us when the stock is worth 0 as we could buy stock at \$0 and then exercise our put option to sell for 50. A call is the opposite, our option to buy is worth the least if the stock price is 0 and will increase in value as the stock price increases.
 
 
 ```python
@@ -410,7 +411,7 @@ plt.show()
 ![png](/img/blackscholes_14_0.png)
 
 
-## Plotting Greeks
+### The Greeks
 
 We can now look at the sensitivity of option greeks to a single parameter. I won't go into any detailed explanations on the greeks here, at a high level they're typically used as a risk measure on a portfolio of options. One would seek to manage their portfolio greeks within given risk appetites i.e. delta hedging.
 
