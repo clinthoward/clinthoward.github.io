@@ -11,7 +11,7 @@ comments: True
 
 # Black-Scholes and the Greeks. 
 
-I wanted to get a better understanding of using Python to play around with options. We'll have a look at creating some option payoff functions, an implementation of Black-Scholes pricing and then finish up with some sensitivity analysis (Greeks). I'll provide a fairly high level overview of what we're doing, but I'm by no means an expert in options! However, I found that b implementing them in Python is good practice in some fundamental skills like list manipulations, maps, plotting and taking it one step further into object-oriented programming.
+I wanted to get a better understanding of using Python to play around with options. We'll have a look at creating some option payoff functions, an implementation of Black-Scholes pricing and then finish up with some sensitivity analysis (Greeks). I'll provide a fairly high level overview of what we're doing, but I'm by no means an expert in options! However, I found that by implementing them in Python is good practice in some fundamental skills like list manipulations, maps, plotting and taking it one step further into object-oriented programming.
 
 \begin{array}{c}
 \frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2S^2\frac{\partial V^2}{\partial S^2} + rS\frac{\partial V}{\partial S} - rV = 0
