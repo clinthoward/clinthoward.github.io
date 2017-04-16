@@ -572,7 +572,7 @@ plt.show()
 ![png](/img/blackscholes_18_0.png)
 
 
-## Greek Surfaces
+### Greek Surfaces
 The next obvious extension from the above is to look at the dependence of option prices/greeks on two variables at once. This can be done quite easily using matplotlib. 
 
 Some really cool plots from [Smile of Thales](http://www.smileofthales.com/options-greeks-python/) which I've adapted and made a bit more customisable if I want to run for some different greeks. 
