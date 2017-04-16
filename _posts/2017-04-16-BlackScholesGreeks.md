@@ -35,7 +35,7 @@ The above equation can be interpreted as the call option premium is the differen
 1. Intrinsic value of exercising the option immediately i.e. what would the payoff be if we exercised
 2. The time value of the option derived from the random behaviour of the underlying. As the underlying stock is typically modelled as a stochastic process, there is a probabilistic component which basically means there is some chance that the stock price could move significantly in our favour over time. Thus, we would typically expect to pay higher premiums for options with longer maturities.
 
-Check out [here](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model) for a basic introduction and links to all the relevant source material (I highly recommend the original 1973 Paper [The Pricing of Options and Corporate Liabilities](https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf).
+Check out [here](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model) for a basic introduction and links to all the relevant source material (I highly recommend the seminal 1973 Paper by Black & Scholes [The Pricing of Options and Corporate Liabilities](https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf)).
 
 The above formulae, as well as some derivatives provide all we'll need to explore the Black Scholes framework for vanilla puts/calls as well as their sensitivies to underlying paramteers (the Greeks).
 
