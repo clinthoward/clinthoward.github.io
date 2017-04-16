@@ -11,15 +11,15 @@ comments: True
 
 # Black-Scholes and the Greeks. 
 
-A Python friendly intro to options. We'll have a look at creating some option payoff functions, an implementation of Black-Scholes pricing and then finish up with some sensitivity analysis (Greeks). I'll provide a fairly high level overview of what we're doing, but some basic knowledge in options is always good (Google is your friend). I'm by no means an expert in options, but find that implementing them in Python is good practice in some fundamental skills like list manipulations, maps, plotting and taking it one step further into object-oriented programming.
+I wanted to get a better understanding of using Python to play around with options. We'll have a look at creating some option payoff functions, an implementation of Black-Scholes pricing and then finish up with some sensitivity analysis (Greeks). I'll provide a fairly high level overview of what we're doing, but I'm by no means an expert in options! However, I found that b implementing them in Python is good practice in some fundamental skills like list manipulations, maps, plotting and taking it one step further into object-oriented programming.
 
 \begin{array}{c}
 \frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2S^2\frac{\partial V^2}{\partial S^2} + rS\frac{\partial V}{\partial S} - rV = 0
 \end{array}
 
-Perhaps the most famous and possibly infamous equation in quantitative finance is the Black-Scholes equation. A PDE which provides the time evolving price of a vanilla option, specifically European put and call options. 
+Perhaps the most famous and possibly infamous equation in quantitative finance is the Black-Scholes equation. A partial-differential equation which provides the time evolving price of a vanilla option, specifically European put and call options here (there are all sorts of extensions which extend the usability of this formula). 
 
-The equation can be solved, to yield a fairly simple closed-form solution for an option price for a non-dividend underlying (and a whole bunch of other assumptions such as efficient markets, no transaction costs etc.). 
+The equation can be solved to yield a fairly simple closed-form solution for an option price for a non-dividend underlying (and a whole bunch of other assumptions such as efficient markets, no transaction costs etc.). 
 
 \begin{array}{c}
 C(S_t, t) = N(d_1)S_t - N(d_2)Ke^{-r(T-t)}
@@ -35,7 +35,7 @@ The above equation can be interpreted as the call option premium is the differen
 1. Intrinsic value of exercising the option immediately i.e. what would the payoff be if we exercised
 2. The time value of the option derived from the random behaviour of the underlying. As the underlying stock is typically modelled as a stochastic process, there is a probabilistic component which basically means there is some chance that the stock price could move significantly in our favour over time. Thus, we would typically expect to pay higher premiums for options with longer maturities.
 
-Check out [here](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model) for a basic introduction and links to all the relevant source material.
+Check out [here](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model) for a basic introduction and links to all the relevant source material (I highly recommend the original 1973 Paper [The Pricing of Options and Corporate Liabilities](https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf).
 
 The above formulae, as well as some derivatives provide all we'll need to explore the Black Scholes framework for vanilla puts/calls as well as their sensitivies to underlying paramteers (the Greeks).
 
@@ -48,11 +48,11 @@ Payoff functions are key to understanding the profit (and loss) that we'll recei
 For now we'll only plot some basic options and option strategies, without doing any calculations of the option prices. The option price will simply be a parameter which we feed into the payoff functions. Later, we'll return and price a European option using the above Black-Scholes method, and this will allow us to build out some more complex option strategy payoff functions with varying maturities.
 
 Basic Concepts/Definitions:
-	* ITM (In-the-money): An option is ITM if it is currently "worth" exercising today i.e. for a call option the current underlying's price is greater than the strike price (and vice versa for a put).
-	* OTM (Out-of-the-money): An option is OTM if it is currently "not worth" exercising today.
-	* ATM (At-the-money): An option is ATM if it is neither ITM or OTM, i.e. exercising today would have no tangible effect (ignoring any transaction costs/option premiums).
-	* Strike Price: This is the price at which our option is exercised at
-	* Underlying: This refers to the asset (which could really be anything which has a price) which underlies the derivative contract.
+* ITM (In-the-money): An option is ITM if it is currently "worth" exercising today i.e. for a call option the current underlying's price is greater than the strike price (and vice versa for a put).
+* OTM (Out-of-the-money): An option is OTM if it is currently "not worth" exercising today.
+* ATM (At-the-money): An option is ATM if it is neither ITM or OTM, i.e. exercising today would have no tangible effect (ignoring any transaction costs/option premiums).
+* Strike Price: This is the price at which our option is exercised at
+* Underlying: This refers to the asset (which could really be anything which has a price) which underlies the derivative contract.
 
 
 	
