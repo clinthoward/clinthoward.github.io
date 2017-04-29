@@ -280,12 +280,7 @@ plt.show()
 eps = data.groupby(["period"]).mean()
 eps.describe()
 ```
-
-    C:\Users\Clint_PC\Anaconda3\lib\site-packages\numpy\lib\function_base.py:3834: RuntimeWarning: Invalid value encountered in percentile
-      RuntimeWarning)
     
-
-
 
 
 <div>
