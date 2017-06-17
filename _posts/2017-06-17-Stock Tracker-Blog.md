@@ -678,8 +678,8 @@ results
       <td>5.342</td>
     </tr>
   </tbody>
-</font>
 </table>
+</font>
 </div>
 
 
