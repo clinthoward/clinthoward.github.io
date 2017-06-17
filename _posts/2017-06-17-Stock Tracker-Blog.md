@@ -408,7 +408,7 @@ results
 
 
 <div>
-<font size = "12">
+<font size = "2">
 <table border="1" class="dataframe" width="400">
   <thead>
     <tr style="text-align: right;">
