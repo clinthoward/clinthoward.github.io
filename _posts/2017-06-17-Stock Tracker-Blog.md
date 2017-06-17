@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Analysis of key Fincial Indices, Sectors and an Extra Focus on Renewable Energy Stocks"
+title:      "Analysis of Key Fincial Indices, Sectors and an Extra Focus on Renewable Energy Stocks"
 subtitle:   "Various ways to pull in and analyse Index data, Equities and Renewable Energy Data"
 date:       2017-06-17 12:00:00
 author:     "Clint Howard"
@@ -8,7 +8,7 @@ category: Portfolio
 tags: [python, data, finance]
 comments: True
 ---
-# Analysis of key Fincial Indices, Sectors and an Extra Focus on Renewable Energy Stocks
+# Analysis of Key Fincial Indices, Sectors and an Extra Focus on Renewable Energy Stocks
 
 I built out this as my own tool to track various things I'm interested in: indices, FX, rates, commodoties and specific equities. It leverages various Quandl datasets, as well as my own database of equities data that I've accumulated from various sources (check [here]( https://clinthoward.github.io/portfolio/2017/04/29/Financial-Scraper/) for set-up of DB). 
 
@@ -118,7 +118,7 @@ vals = quandl.get(all_codes, start_date=start_date, end_date = curr_date)
 ```
 
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to expand</summary><p>
 ```python
 fig, ax = plt.subplots(nrows=4, ncols=2, sharex=False, sharey=False, figsize = (15,20))
 fig.suptitle('Indices', fontsize=20, fontweight='bold')
@@ -172,7 +172,7 @@ plt.tight_layout(rect=[0, 0.03, 1, 0.97])
 plt.show()
 
 ```
-</details>
+</p></details>
 
 
 
@@ -180,7 +180,7 @@ plt.show()
 
 
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to expand</summary><p>
 ```python
 fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True, sharey=False, figsize = (10,15))
 fig.suptitle('Credit', fontsize=20, fontweight='bold')
@@ -198,14 +198,14 @@ plt.title('CDX NA High Yield')
 plt.tight_layout(rect=[0, 0.03, 1, 0.97])
 plt.show()
 ```
-</details>
+</p></details>
 
 
 
 ![png](/img/findashboard_8_0.png)
 
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to expand</summary><p>
 ```python
 fig, ax = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=False, figsize = (10,15))
 fig.suptitle('Rates', fontsize=20, fontweight='bold')
@@ -230,7 +230,7 @@ fig.delaxes(ax.flatten()[3])
 plt.tight_layout(rect=[0, 0.03, 1, 0.97])
 plt.show()
 ```
-</details>
+</p></details>
 
 
 
@@ -238,7 +238,8 @@ plt.show()
 ![png](/img/findashboard_9_0.png)
 
 
-
+<details>
+  <summary>Click to expand</summary><p>
 ```python
 fig, ax = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=False, figsize = (10,15))
 fig.suptitle('Commodities', fontsize=20, fontweight='bold')
@@ -263,12 +264,12 @@ fig.delaxes(ax.flatten()[3])
 plt.tight_layout(rect=[0, 0.03, 1, 0.97])
 plt.show()
 ```
-
+</p></details>
 
 ![png](/img/findashboard_10_0.png)
 
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to expand</summary><p>
 ```python
 fig, ax = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=False, figsize = (10,15))
 fig.suptitle('BTC', fontsize=20, fontweight='bold')
@@ -296,7 +297,7 @@ plt.title('Total BTC')
 plt.tight_layout(rect=[0, 0.03, 1, 0.97])
 plt.show()
 ```
-</details>
+</p></details>
 
 
 
@@ -304,7 +305,7 @@ plt.show()
 ![png](/img/findashboard_11_0.png)
 
 <details>
-  <summary>Click to expand</summary>
+  <summary>Click to expand</summary><p>
 ```python
 fig, ax = plt.subplots(nrows=2, ncols=2, sharex=True, sharey=True, figsize = (10,15))
 fig.suptitle('FX', fontsize=20, fontweight='bold')
@@ -334,7 +335,7 @@ plt.show()
 
 fig.savefig(save_path+"FX_"+str(curr_date)[0:10])
 ```
-</details>
+</p></details>
 
 
 
