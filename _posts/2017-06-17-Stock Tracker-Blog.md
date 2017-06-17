@@ -1949,7 +1949,7 @@ for t in symbols1.index:
 
 ```
 
-### Summary Table
+### Summary Plots
 Now that we've pulled in all the data, we want to actually see if we can learn anything useful from it! As a first pass, I'm just going to look at various returns over the past year and see if anything pops up about certain sectors. Note that our dataset is quite small as the entire listed renewables sector isn't massive, definitely significant work can be done here to expand this analysis to incorporate many more companies.
 
 
