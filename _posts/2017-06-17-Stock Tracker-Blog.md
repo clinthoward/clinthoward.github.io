@@ -409,7 +409,7 @@ results
 
 <div>
 <font size = "2">
-<table border="1" class="dataframe" width="400">
+<table border="1" class="dataframe" width="300">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -814,7 +814,8 @@ results_audsectors
 
 
 <div>
-<table border="1" class="dataframe">
+<font size="2">
+<table border="1" class="dataframe" width="300">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -950,6 +951,7 @@ results_audsectors
     </tr>
   </tbody>
 </table>
+</font>
 </div>
 
 
@@ -996,7 +998,8 @@ results_adjaudsectors
 
 
 <div>
-<table border="1" class="dataframe">
+<font size = "2">
+<table border="1" class="dataframe" width = "300">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1132,6 +1135,7 @@ results_adjaudsectors
     </tr>
   </tbody>
 </table>
+</font>
 </div>
 
 
@@ -1303,7 +1307,8 @@ symbols1
 
 
 <div>
-<table border="1" class="dataframe">
+<font size="2">
+<table border="1" class="dataframe" width="300">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1868,6 +1873,7 @@ symbols1
   </tbody>
 </table>
 <p>96 rows × 6 columns</p>
+</font>
 </div>
 
 
