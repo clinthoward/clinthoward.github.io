@@ -408,6 +408,7 @@ results
 
 
 <div>
+<font size = "12">
 <table border="1" class="dataframe" width="400">
   <thead>
     <tr style="text-align: right;">
@@ -677,6 +678,7 @@ results
       <td>5.342</td>
     </tr>
   </tbody>
+</font>
 </table>
 </div>
 
