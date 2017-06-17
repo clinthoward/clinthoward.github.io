@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Analysis of Key Fincial Indices, Sectors and an Extra Focus on Renewable Energy Stocks"
+title:      "Analysis of Key Fincial Indices, Sectors and Something Extra for Renewable Energy Stocks"
 subtitle:   "Various ways to pull in and analyse Index data, Equities and Renewable Energy Data"
 date:       2017-06-17 12:00:00
 author:     "Clint Howard"
@@ -8,7 +8,7 @@ category: Portfolio
 tags: [python, data, finance]
 comments: True
 ---
-# Analysis of Key Fincial Indices, Sectors and an Extra Focus on Renewable Energy Stocks
+# Analysis of Key Fincial Indices, Sectors and Something Extra for Renewable Energy Stocks
 
 I built out this as my own tool to track various things I'm interested in: indices, FX, rates, commodities and specific equities. It leverages various Quandl datasets, as well as my own database of equities data that I've accumulated from various sources (check [here]( https://clinthoward.github.io/portfolio/2017/04/29/Financial-Scraper/) for set-up of DB). 
 
