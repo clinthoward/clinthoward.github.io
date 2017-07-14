@@ -331,7 +331,7 @@ Let's use Quandl to bring in some data and use Seaborn to look at the correlatio
 ```python
 import quandl
 
-quandl.ApiConfig.api_key = "Hf7nyASZMiBv5GDPFkcd"
+quandl.ApiConfig.api_key = "quandlkey"
 all_codes = ["CHRIS/CME_CL1.4","CHRIS/ASX_AP1.1"]
 oil = quandl.get(all_codes, start_date=pd.datetime(2016,9,1), end_date = pd.datetime(2017,5,30))
 ```
