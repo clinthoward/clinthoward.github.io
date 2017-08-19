@@ -502,7 +502,7 @@ Of interest in spreads is the strong mean reversion we see. We can use a pretty 
 $$dr_t  = \kappa (\theta - r_t)dt + \sigma dW $$
 where $\kappa$ represents the mean reversion strength, $\theta$ is the long-run mean and $\sigma$ is the volatility. The basic approach is to calibrate kappa, theta and sigma based on a historical dataset and then use it in Monte Carlo modelling of rate paths.
 
-Below code is an implementation from https://github.com/bickez/puppy-economics/blob/master/vasicek.R in Python.
+Below code is an implementation from [Puppy Economics](https://github.com/bickez/puppy-economics/blob/master/vasicek.R) in Python.
 
 We simulate the rates path using a closed form solution: 
 
