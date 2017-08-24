@@ -609,7 +609,7 @@ plt.show()
 
 
 To observe the mean reverting nature of the model, we can specify $r_0$ further away from theta. We can clearly see that the rates are being pulled towards theta over time, and the speed of this reversion is controlled by the magnitude of kappa. The larger kappa, the quicker mean reversion we'd expect to see. The larger sigma is, the more volatility we expect to see and the wider potential rate distributions.
-
+***titles on below need to be fixed.
 
 ```python
 M = 100
