@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Analysis of Key Fincial Indices, Sectors and Something Extra for Renewable Energy Stocks"
+title:      "Analysis of Key Financial Indices, Sectors and Something Extra for Renewable Energy Stocks"
 subtitle:   "Various ways to pull in and analyse Index data, Equities and Renewable Energy Data"
 date:       2017-06-17 12:00:00
 author:     "Clint Howard"
