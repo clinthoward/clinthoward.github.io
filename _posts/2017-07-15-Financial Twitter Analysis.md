@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Twitter - Scraper and Sentinment Analysis of Financial Twitter Accounts"
-subtitle:   "We pull some historical AFR twitter data and run it through VADER sentinment analysis to see how it's tracked over time."
+subtitle:   "We pull some historical AFR twitter data and run it through VADER sentiment analysis to see how it's tracked over time."
 date:       2017-07-15 12:00:00
 author:     "Clint Howard"
 category: Portfolio
