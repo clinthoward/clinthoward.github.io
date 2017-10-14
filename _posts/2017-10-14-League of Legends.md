@@ -1057,19 +1057,16 @@ plt.show()
 
 
 ```python
-# select features using threshold
 selection = SelectFromModel(clf3, threshold=0.05, prefit=True)
-select_X_train = selection.transform(X_train)
-# train model
+X_train_sel = selection.transform(X_train)
 selection_model = XGBClassifier()
 selection_model.fit(select_X_train, y_train)
-# eval model
-select_X_test = selection.transform(X_test)
-y_pred = selection_model.predict(select_X_test)
+X_test_sel = selection.transform(X_test)
+y_pred = selection_model.predict(X_test_sel)
 
 predictions = [round(value) for value in y_pred]
 accuracy = accuracy_score(y_test, predictions)
-print("Thresh=%.3f, n=%d, Accuracy: %.2f%%" % (0.05, select_X_train.shape[1], accuracy*100.0))
+print("Thresh=%.3f, n=%d, Accuracy: %.2f%%" % (0.05, X_train_sel.shape[1], accuracy*100.0))
 ```
 
     Thresh=0.050, n=4, Accuracy: 96.05%
