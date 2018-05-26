@@ -133,7 +133,7 @@ cleaned_script_characters = gen_cleaned_script(df, True, main_characters_lower)
     
 
 ## Count Analysis
-The first basic analysis we can do is to look at the most common words used across the entire script. Not that interesting, but we can apply to the entire script as well as on a character by character level if we so choose.
+The first basic analysis we can do is to look at the most common words used across the entire script. Not that interesting, but we can apply to the entire script as well as on a character by character level if we so choose (or even a specific subset of words).
 
 When combined with clean_words() above, we can effectively run count analyses on any set of words we wish (i.e. all words in the script, character names, location references, etc etc.). We'll first show how to run this across ALL data 
 
@@ -361,7 +361,7 @@ michael_counts.sort_values(by='Count', ascending=False)[0:20]
 
 
 
-Now that we've run the analysis for one character, we can run this analysis across all characters to see who is saying each others names the most! Not unexpectedly, we see the four main characters (Michael, Jim, Dwight and Pam) dominating the charts! With Michael in particular also having a touch across pretty much every other characters name.
+Now that we've run the analysis for one character, we can run this analysis across all characters to see who is saying each others names the most! Not unexpectedly, we see the four main characters (Michael, Jim, Dwight and Pam) dominating the charts. With Michael in particular having a large amount of intereaction across pretty much every other characters name.
 
 
 ```python
@@ -385,7 +385,7 @@ plt.show()
 
 
 ## Sentiment Analysis using VADER
-Perhaps more interesting is to look at how positive/negative/neutral each of the characters lines are, how they've varied over time and how they correlate with each other. Note that the correlation is not necessarily due to the characters interacting with each other, but just there general mood within each season. I.e. if we see a positive correlation, it means that within that season both of those characters GENERALLY had, on average, positive sentiment in their lines. 
+Perhaps more interesting is to look at how positive/negative/neutral each of the characters lines are, how they've varied over time and how they correlate with each other. Note that the correlation is not necessarily due to the characters interacting with each other, but just there general mood within each season. I.e. if we see a positive correlation, it means that within that season both of those characters generall had, on average, positive sentiment in their lines. 
 
 
 ```python
@@ -435,9 +435,9 @@ corrmat = np.corrcoef(out.T)
 corrmat = pd.DataFrame(corrmat, columns=out.columns, index=out.columns)
 ```
 
-Having done our primitive VADER analysis across each character and season, we can start to look at the trends. The favourite one popping up is the change in Michael from Season 1 to Season 2. It's a well known fact that there was a creative change in the direction of Michael's character from a terrible, overbearing boss (more similar to the Ricky Gervais version), to a much more likeable goofball. We see this reflected in the stark transition in the compound sentiment of his character. 
+Having done our primitive VADER analysis across each character and season, we can start to look at the trends. My favourite one popping up is the change in Michael from Season 1 to Season 2. It's a well known fact that there was a creative change in the direction of Michael's character from a terrible, overbearing boss (more similar to the Ricky Gervais version), to a much more likeable goofball. We see this reflected in the stark transition in the compound sentiment of his character. 
 
-It should be noted that because we're taking the aggregate across each character, it will be influenced by the amount of lines the character has. We could use the mean but results weren't substantially different...
+It should be noted that because we're taking the aggregate across each character, it will be influenced by the amount of lines the character has. We could use the mean but the results weren't substantially different...
 
 
 ```python
@@ -465,7 +465,7 @@ plt.show()
 ![png](/img/theoffice_20_1.png)
 
 
-Now that we've see the polarising impact of Michael, we can look at the "aggregate" sum of correlation across each character. This should effectively tell us who shares the most consistent positive/negative sentiment across a season with all of the other characters. Not unsurprisingly we see Pam, Kevin and Phyllis topping these charts, the characters who aren't really conflict starters. Interestingly we also see Angela up there...
+Now that we've seen the polarising impact of Michael, we can look at the "aggregate" sum of correlation across each character. This should effectively tell us who shares the most consistent positive/negative sentiment across a season with all of the other characters. Not unsurprisingly we see Pam, Kevin and Phyllis topping these charts, the characters who aren't really conflict starters. Interestingly we also see Angela up there...not sure how to explain that one just yet.
 
 Right down the bottom we see Michael, Toby, Ryan and Andy who were all characters up for some conflict... typically with each other.
 
