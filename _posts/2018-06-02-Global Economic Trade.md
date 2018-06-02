@@ -10,7 +10,7 @@ comments: True
 ---
 # Global Economic Trade Data
 With Global tensions increasing among the looming trade war, let's take a deep dive into historical trade statistics from the UN and see who really is a net exporter/net importer, as well as where the trade values primarily lie.
-
+Data sourced from the UN [here](http://data.un.org/Explorer.aspx)
 
 ```python
 import pandas as pd 
