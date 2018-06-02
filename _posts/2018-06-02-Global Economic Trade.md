@@ -2,7 +2,7 @@
 layout:     post
 title:      "Global Trade Surpluses"
 subtitle:   "We investigate the United Nations Global Economic Trade data, particularly looking at surpluses given the current global trade tensions."
-date:       2017-06-02 12:00:00
+date:       2018-06-02 12:00:00
 author:     "Clint Howard"
 category: Portfolio
 tags: [python, data, finance]
