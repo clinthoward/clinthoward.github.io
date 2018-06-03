@@ -443,8 +443,7 @@ def calc_start_score(value):
 ## Factor Loadings
 Above we got our data into a nice clean format for running through some regression models. Our approach is fairly simple:
 1. Split the dataset into a training period (before November 2016) and test period (November 2016 onwards).
-2. Fit our models to the training dataset. Effectively:
-    $Expected Return = \alpha + \beta_1*LastFiveStarts + \beta_2*DaysSinceLastRun + \beta_3*Handicap + \beta_4*Barrier + \beta_5*Form + \beta_6*\frac{1}{odds} + \beta_7*\frac{1}{odds}^2 + \epsilon$
+2. Fit our models to the training dataset. Effectively: $Expected Return = \alpha + \beta_1*LastFiveStarts + \beta_2*DaysSinceLastRun + \beta_3*Handicap + \beta_4*Barrier + \beta_5*Form + \beta_6*\frac{1}{odds} + \beta_7*\frac{1}{odds}^2 + \epsilon$
 3. In our test period, calculate the expected return for each horse as $H_{alpha}$ and then bucket our $H_{alpha}$ into quartiles.
 4. In each race, systematically bet an equal amount across each horse in each quartile 
 5. Track profits over time in each quartile
