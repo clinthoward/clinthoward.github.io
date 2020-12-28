@@ -11,7 +11,7 @@ comments: True
 
 # Cryptocurrency - Empirical Asset Pricing
 
-Cryptocurrency is all the rage again. Bitcoin has been on a strong, steady surge over 2020. In addition, factor investing has been under the microscope, with exceptional volatility and weekly claims of "value rebounds". In addition, there is an emerging literature which is applying standard empirical asset pricing techniques to cryptocurrency datasets. What better way to jump on the bandwagon, then combine all of them and setup an infrastructure for crypto asset pricing. 
+Cryptocurrency is all the rage again. Bitcoin has been on a strong, steady surge over 2020. In addition, there is an emerging literature which is applying standard empirical asset pricing techniques to cryptocurrency datasets. What better way to jump on the bandwagon, then combine all of them and setup an infrastructure for crypto asset pricing (from an academic viewpoint). 
 
 Disclaimer: this is purely my opinion and for research interests/illustrative purposes. It is in no way investment advice, and may not reflect the views of my employer.
 
