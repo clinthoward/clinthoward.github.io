@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Paper implementation: "The role of central bank capital revisited"
+title:      "Paper implementation: 'The role of central bank capital revisited'"
 subtitle:   "We implement the Monte Carlo analysis of the central bank model from Bindseil, Manzanares, and Weller (2004) in Python."
 date:       2021-01-09 12:00:00
 author:     "Clint Howard"
