@@ -19,7 +19,7 @@ Order: 2
         <ul class="past">
         {% capture current_year %}{{post_year}}{% endcapture %}
       {% endif %}
-      <li><time>{{ post.date | date: "%d %b " }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li><time>{{ post.date | date: " %d %b " }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </section>
