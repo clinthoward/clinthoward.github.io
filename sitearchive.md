@@ -9,7 +9,7 @@ Order: 2
 
 <section id="archive">
   <h3>This year's posts</h3>
-  {% capture current_year %}{{site.posts.first.date | date: "%Y"}}{% endcapture %}
+  {% capture current_year %}{% cycle 0, site.posts.first.date | date: "%Y" %}{% endcapture %}
   <ul class="this">
     {% for post in site.posts %}
       {% capture post_year %}{{post.date | date: "%Y"}}{% endcapture %}
