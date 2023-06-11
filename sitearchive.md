@@ -9,19 +9,17 @@ Order: 2
 
 <section id="archive">
   <h3>This year's posts</h3>
-  {%for post in site.posts %}
-    {% unless post.next %}
-      <ul class="this">
-    {% else %}
-      {% capture year %}{{ post.date | date: '%Y: ' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y: ' }}{% endcapture %}
-      {% if year != nyear %}
+  {% capture current_year %}{{site.posts.first.date | date: "%Y"}}{% endcapture %}
+  <ul class="this">
+    {% for post in site.posts %}
+      {% capture post_year %}{{post.date | date: "%Y"}}{% endcapture %}
+      {% if post_year != current_year %}
         </ul>
-        <h3>{{ post.date | date: '%Y: ' }}</h3>
+        <h3>{{ post.date | date: "%Y" }}</h3>
         <ul class="past">
+        {% capture current_year %}{{post_year}}{% endcapture %}
       {% endif %}
-    {% endunless %}
-      <li><time>{{ post.date | date:"%d %b " }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
+      <li><time>{{ post.date | date: "%d %b" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
   </ul>
 </section>
