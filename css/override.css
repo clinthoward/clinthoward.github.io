@@ -1,5 +1,23 @@
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('../fonts/MonaSans-Regular.woff2') format('woff2 supports variations'),
+    url('../fonts/MonaSans-Regular.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+@font-face {
+  font-family: 'Mona Sans SB';
+  src:
+    url('../fonts/MonaSans-SemiBold.woff2') format('woff2 supports variations'),
+    url('../fonts/MonaSans-SemiBold.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+}
+
 body {
-  font-family: 'Open Sans', serif;
+  font-family: 'Mona Sans', serif;
   }
 
 h1, h2, h3, h4, h5, .site-title, .site-nav {
@@ -9,3 +27,4 @@ h1, h2, h3, h4, h5, .site-title, .site-nav {
 a {
   color: blue;
 }
+
