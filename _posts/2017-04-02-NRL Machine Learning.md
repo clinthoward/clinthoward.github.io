@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Exploration and Prediction on NRL Data"
-subtitle:   "We first explore some NRL data, and then attempt to use some basic features in a machine learning framework. Our ultimate goal is to use match results to predict future results."
+subtitle:   "I first explore some NRL data, and then attempt to use some basic features in a machine learning framework. My ultimate goal is to use match results to predict future results."
 date:       2017-04-02 12:00:00
 author:     "Clint Howard"
 header-img: "/img/post-bg-06.jpg"
@@ -506,7 +506,7 @@ train_inputs, train_outputs, test_inputs, test_outputs = split_samples(inputs, o
 
 ```
 
-## 6. Basic Models 
+## 6. Basic Models
 
 
 ```python

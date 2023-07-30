@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Exploration and Prediction on League of Legends Match Data"
-subtitle:   "We investigate LoL match data and apply some basic machine learning techniques to predict a winner."
+subtitle:   "I investigate LoL match data and apply some basic machine learning techniques to predict a winner."
 date:       2017-10-14 12:00:00
 author:     "Clint Howard"
 category: Portfolio
@@ -503,7 +503,7 @@ df.describe()
 
 
 
-## EDA 
+## EDA
 
 We can perform some basic manipulations to get an insight into the frequency with which differenct champions & summoner spells are selected, as well as the differences in selection between the two teams. 
 

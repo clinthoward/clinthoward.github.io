@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Global Trade Surpluses"
-subtitle:   "We investigate the United Nations Global Economic Trade data, particularly looking at surpluses given the current global trade tensions."
+subtitle:   "I investigate the United Nations Global Economic Trade data, particularly looking at surpluses given the current global trade tensions."
 date:       2018-06-02 12:00:00
 author:     "Clint Howard"
 category: Portfolio

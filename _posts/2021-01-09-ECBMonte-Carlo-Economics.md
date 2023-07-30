@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Paper implementation: 'The role of central bank capital revisited'"
-subtitle:   "We implement the Monte Carlo analysis of the central bank model from Bindseil, Manzanares, and Weller (2004) in Python."
+subtitle:   "I implement a Monte Carlo analysis of the central bank model from Bindseil, Manzanares, and Weller (2004) in Python."
 date:       2021-01-09 12:00:00
 author:     "Clint Howard"
 category: Economics
@@ -335,7 +335,7 @@ def run_simulation(t, m0, b0, c0, f0, pi0, q0, i0,
     return pi, q, f, b, c, i_m, i_f, m, p
 ```
 
-## Scenario 1 
+## Scenario 1
 
 In scenario 1, we have a profit making central bank which has positive capital. 
 

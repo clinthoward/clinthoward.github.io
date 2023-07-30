@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "A Primitive CryptoCurrency Trading Strategy"
-subtitle:   "We investigate some mildly outdated cryptocurrency data and implement a primitive trading strategy."
+subtitle:   "I investigate some mildly outdated cryptocurrency data and implement a primitive trading strategy."
 date:       2018-02-18 12:00:00
 author:     "Clint Howard"
 category: Portfolio

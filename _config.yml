@@ -1,9 +1,10 @@
 # Site settings
 title: Musings On Data
+author: Clint Howard
 header-img: img/home-bg.jpg
 email: clint.howard92@gmail.com
 copyright_name:
-description: "A collection of data analysis projects"
+description: "Personal website for Clint Howard"
 baseurl: ""
 url: "https://clinthoward.github.io"
 twitter_username:
@@ -16,7 +17,6 @@ linkedin_username: clint-howard-5a29b927
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
 #google_tracking_id: UA-85406922-1
 google_analytics: G-RN281GHWK6
-
 
 author :
   name : Clint Howard

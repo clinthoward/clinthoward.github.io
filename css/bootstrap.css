@@ -198,9 +198,9 @@ th {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
   }
-  a,
   a:visited {
     text-decoration: underline;
+     color: red;
   }
   a[href]:after {
     content: " (" attr(href) ")";

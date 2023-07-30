@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "An Investigation into Interest Rate Modelling: PCA and Vasicek"
-subtitle:   "We apply PCA and stochastic modelling to treasury rates, swap rates and the spread between the two."
+subtitle:   "I apply PCA and stochastic modelling to treasury rates, swap rates and the spread between the two."
 date:       2017-08-19 12:00:00
 author:     "Clint Howard"
 category: Portfolio

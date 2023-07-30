@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Can We Predict Australian Rainfall? "
-subtitle:   "We build a simple LSTM model to forecast Australian average rainfall patterns."
+subtitle:   "I build a simple LSTM model to forecast Australian average rainfall patterns."
 date:       2018-06-02 12:00:00
 author:     "Clint Howard"
 category: Portfolio

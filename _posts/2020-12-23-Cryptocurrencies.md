@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Cryptocurrency Asset Pricing"
-subtitle:   "We apply empirical asset pricing techniques to study the cross-section of cryptocurrency returns."
+subtitle:   "I apply empirical asset pricing techniques to study the cross-section of cryptocurrency returns."
 date:       2020-12-23 12:00:00
 author:     "Clint Howard"
 category: Portfolio

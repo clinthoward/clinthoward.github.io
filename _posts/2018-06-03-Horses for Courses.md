@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Horses for Courses: A Systematic Betting Strategy"
-subtitle:   "We develop a systematic strategy for betting on horse racing."
+subtitle:   "I develop a systematic strategy for betting on horse racing."
 date:       2018-06-03 12:00:00
 author:     "Clint Howard"
 category: Portfolio

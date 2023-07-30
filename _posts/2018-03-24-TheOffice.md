@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Textual Analysis of The Office (US) Transcripts"
-subtitle:   "We apply textual analysis techniques to analyse every line from The Office (US)."
+subtitle:   "I apply textual analysis techniques to analyse every line from The Office (US)."
 date:       2018-03-24 12:00:00
 author:     "Clint Howard"
 category: Portfolio
