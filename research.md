@@ -7,7 +7,7 @@ Order: 5
 
 ### Working papers
 
-* [Less is More? Reducing Biases and Overfitting in Machine Learning Return Predictions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=449773)
+* [Less is More? Reducing Biases and Overfitting in Machine Learning Return Predictions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4497739)
 * [The Term Structure of Machine Learning Alpha](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4474637)
 (with David Blitz, Matthais X. Hanauer, and Tobias Hoogteijling)
 
