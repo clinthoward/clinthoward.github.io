@@ -6,16 +6,17 @@ page.comments: True
 
 <!-- Post Header -->
 
-<header class="intro-header" style="background-image:url('/img/birds_nature_forest-18196.jpg')">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h2>{{ page.title }}</h2>
+<!--                     <h2>{{ page.title }}</h2>
                     {% if page.subtitle %}
-                    <h3 class="subheading">{{ page.subtitle }}</h3>
-                    {% endif %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <h5>{{ page.subtitle }}</h4>
+                    {% endif %} -->
+                    <br></br>
+                    <span class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
 		    </div>
             </div>
         </div>
