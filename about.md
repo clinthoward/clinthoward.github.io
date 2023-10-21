@@ -22,7 +22,7 @@ I have wide and varied research interests in machine learning, portfolio constru
 
 ### Other general stuff I do
 
-Aside from investments, I also enjoy playing a myriad of guitars, watching every grade of horror movie, and dabbling in some ultimate frisbee.
+Aside from investments, I also enjoy playing a myriad of guitars, watching every grade of horror movie, and dabbling in some ultimate frisbee. You can checkout the less academic things I'm currently reading [here](https://www.goodreads.com/clinthoward).
 
 
 Everything presented here is my own opinion and are these are not necessarily shared by my employer.  All errors are my own, and in no way constitutes any form of investment advice.
