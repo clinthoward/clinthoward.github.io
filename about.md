@@ -5,14 +5,14 @@ header-img: "img/about-bg.jpg"
 Order: 3
 ---
 
-I am a quantitative researcher with a focus on systematic equity investing. I'm currently working as a researcher for Robeco in Rotterdam, The Netherlands. I'm also finishing up my part-time PhD in Finance at the University of Technology Sydney, where I focused on machine learning applications in empirical finance. In my prior life, I studied chemical engineering.
+I am a quantitative researcher with a focus on systematic equity investing. I'm currently working as a researcher for Robeco in Rotterdam, The Netherlands. I've got a PhD from the University of Technology Sydney that I completed part-time whilst working, where I focused on machine learning applications in finance. In my prior life, I studied chemical engineering and mathematics.
 
 I have wide and varied research interests in machine learning, portfolio construction, and empirical asset pricing. At the moment I'm working on several machine learning projects as they pertain to asset pricing, as well as portfolio optimization for sustainable portfolio objectives. Go [here](/research/) to see more.
 
 ### Career stuff I've done
 
 * 2022 - Current: Quantitative Researcher @ Robeco in Rotterdam
-* 2019 - Current: PhD @ UTS Business School in Sydney
+* 2019 - 2023: PhD @ UTS Business School in Sydney
 * 2017 - 2022: Quantitative Analyst @ Macquarie Investment Management in Sydney
 * 2016 - 2017: Risk Analyst @ Macquarie in Sydney
 * 2015 - 2016: Computational Fluid Dynamics Research Assistant @ University of Sydney
