@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "My PhD Thesis: A Summary"
+title:      "My PhD Thesis"
 subtitle:   "The Battle of the Models: Modern Takes on Traditional and Machine Learning Techniques in Empirical Finance"
 date:       2023-12-10 12:00:00
 author:     "Clint Howard"
@@ -9,7 +9,7 @@ tags: [python, data, finance, economics, machine learning]
 comments: True
 ---
 
-# My [PhD Thesis](files/20231210_thesis.pdf): A Summary
+# My [PhD Thesis](/files/20231210_thesis.pdf)
 
 As you may have noticed, my posting activity on this site over the past several years has been effectively non-existent. I originally created this blog to encourage myself to "finish" mini-projects I was using to learn Python and find a career in quant investment management, but it has now morphed somewhat into my personal landing page. In 2019 I began a part-time PhD, where I maintained my full-time career as a quant equity research whilst spending my nights and weekends doing academic research. Naturally this meant the more "fun" data/learning projects posted here went to the bottom of the priority pile. 
 
@@ -17,7 +17,7 @@ In November 2023 I was officially conferred my Doctor in Philosophy, capping off
 
 You can access the full thesis [here](https://opus.lib.uts.edu.au/handle/10453/173605) and I've dropped the Introduction of the thesis below. 
 
-# Introduction
+## Introduction
 
 Academics and practitioners utilize commonly accepted views, paradigms, and “rules of thumb” in their everyday work. These consensus views often exist in response to the inherent challenge in modeling real-world financial markets. Empirical models are often not sophisticated enough to fully capture the complex behavior of financial markets, often leading to empirical anomalies: contradictions between real-world behavior and the behavior predicted by financial models. In financial markets, a dogmatic approach to many of the existing puzzles and anomalies has generally been adopted. Longstanding results, while not standing up to empirical evidence, persist to this day due to their acceptance as “easy to understand” and “easy to explain.” A canonical example is the capital asset pricing model (CAPM), independently proposed in the 1960s by several researchers. Despite the continuous challenges and criticism of the CAPM, it remains commonplace in finance curricula and empirical practice.
 
@@ -25,7 +25,7 @@ The blending of natural and social sciences is at the heart of this adherence to
 
 This thesis examines biases and puzzles in empirical finance that arise from both traditional and modern modeling approaches. Chapters 2–4 of this thesis each explore a different topic in empirical finance research where commonly held beliefs are prevalent. Chapter 2 resolves the CAPM beta anomaly by fully accounting for time-series asynchronicity using dynamic time warping (DTW). Chapter 3 challenges the notion that the Standard and Poor's (S&P) index effect has disappeared, finding that the S&P index effect is still present for subsets of index change announcements. Finally, Chapter 4 questions the current discipline when applying machine learning in asset pricing by demonstrating how empirical anomalies can arise from seemingly innocuous arbitrary modeling decisions.
 
-## Asynchronicity between financial time series
+### Asynchronicity between financial time series
 
 Asynchronicity is at the core of time-series models in financial econometrics. As markets have become faster, a prevailing view is that asynchronicity has become less problematic in empirical modeling, but this is far from accurate Although asynchronicity at lower frequencies (such as daily observations) has undoubtedly reduced, as long as latency between trading venues exists, latency will exist between common assets. The persistent nature and varying manifestations of asynchronicity continue to plague time-series models and have undue influence on model inference. Therefore, it is necessary to continue to explore methods for measuring and correcting for asynchronicity in financial models.
 
@@ -33,7 +33,7 @@ Chapter 2 proposes using DTW to measure asynchronicity between financial time se
 
 Chapter 2 also demonstrates how applying new techniques can challenge long-held consensus views around empirical results. Asynchronicity effects in trading drive the manifestation of stock betas, resulting in the beta anomaly in historical data. Although previous approaches for incorporating this asynchronicity into the measurement of beta improve the base result, they do not fully account for the dynamic nature of asynchronicity. By fully accounting for the dynamic lead–lag effects, a more accurate beta estimate can be obtained. Ultimately, DTW is shown to be a suitable method for measuring and correcting for dynamic asynchronicity between financial time series.
 
-## Is the S&P index effect dead?
+### Is the S&P index effect dead?
 
 One of the core features of financial markets is their self-learning nature. As academics and practitioners collectively learn and disseminate research around financial markets, participants incorporate this information into their behavior when operating in these markets. Academic literature can reveal an empirical observation in historical data, but there is no guarantee that this observation will manifest in the future realizations of the data. The commonly known S&P index effect is a key example of this phenomenon. Initial research (Harris and Gurel, 1986; Shleifer, 1986; Jain, 1987; Dhillon and Johnson, 1991; Lynch and Mendenhall, 1997; Chen, Noronha, and Singal, 2004) showed that stocks experience abnormal returns when added to or deleted from the S&P 500 index and that this pattern could be exploited for profit. New results (Kamal, Lawrence, McCabe, and Prakash, 2012; Kim, Li, and Perry, 2017; Bender, Nagori, and Tank, 2019; Bennett, Stulz, and Wang, 2020), using an updated sample of index announcements, find that the S&P index effect has disappeared. Stocks no longer experience statistically significant abnormal returns when added to or deleted from the S&P 500 index. However, this claim of the death of the S&P index effect has coincided with the enormous growth in passive investing and the amount of assets passively following the S&P 500 index. With such a significant growth in assets that mechanically track the S&P 500 index, the economic prior suggests that the S&P index effect should still exist, creating a puzzling observation of the death of the index effect.
 
@@ -41,7 +41,7 @@ Chapter 3 examines the S&P index effect by collecting a complete sample of S&P 5
 
 Chapter 3 further demonstrates that different approaches to studying the same problem can yield different conclusions. By replicating original studies with newer data, the original results on the existence of the S&P index effect can be discarded if the market context of the new results is not acknowledged. However, by considering how changes in market structure (such as the growth of passive investing) could impact index changes, richer insights on the S&P index effect can be obtained, complementing, and extending earlier results.
 
-## Biases and overfitting in cross-sectional machine learning models
+### Biases and overfitting in cross-sectional machine learning models
 
 The application of machine learning models across numerous disciplines has seen significant success in recent years. Seminal papers applying machine learning to asset pricing demonstrate the strength and superiority of machine learning models when using large sets of cross-sectional asset pricing characteristics to predict future excess returns across various asset classes. However, with such rapid growth in the literature, and the applied approach of trial-and-error for estimating these models, a rigorous understanding of how these models operate in the asset pricing domain has been understudied. 
 
