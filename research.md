@@ -11,7 +11,7 @@ Order: 5
 
 
 ### Publications
-* [The Battle of the Models: Modern Takes on Traditional and Machine Learning Techniques in Empirical Finance] (https://opus.lib.uts.edu.au/handle/10453/173605)
+* [The Battle of the Models: Modern Takes on Traditional and Machine Learning Techniques in Empirical Finance](https://opus.lib.uts.edu.au/handle/10453/173605)
 * [The Term Structure of Machine Learning Alpha](https:/doi.org/10.3905/jfds.2023.1.135) (with David Blitz, Matthias Hanauer, and Tobias Hoogteijling) in the Journal of Financial Data Science. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4474637)
 * [Proper Orthogonal Decomposition (POD) analysis of CFD data for flow in an axisymmetric sudden expansion](https://doi.org/10.1016/j.cherd.2017.05.017)
 (with Sushen Gupta, Ali Abbas, Timothy A.G. Langrish, and David F. Fletcher) in Chemical Engineering Research and Design 
