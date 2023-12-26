@@ -7,6 +7,7 @@ Order: 5
 
 ### Working papers
 
+* [3D Investing: Jointly Optimizing Return, Risk, and Sustainability](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4670534)
 * [Less is More? Reducing Biases and Overfitting in Machine Learning Return Predictions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4497739)
 
 
