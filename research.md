@@ -6,7 +6,8 @@ Order: 5
 ---
 
 ### Working papers
-
+* [Causal Network Representations in Factor Investing](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4679870)
+* [Beyond GMV: Raising the Bar for Evaluating Covariance Matrix Estimators](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4684926)
 * [3D Investing: Jointly Optimizing Return, Risk, and Sustainability](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4670534)
 * [Less is More? Reducing Biases and Overfitting in Machine Learning Return Predictions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4497739)
 
