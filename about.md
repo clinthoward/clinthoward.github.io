@@ -5,9 +5,9 @@ header-img: "img/about-bg.jpg"
 Order: 3
 ---
 
-I am a quantitative researcher with a focus on systematic equity investing. I'm currently working as a researcher for Robeco in Rotterdam, The Netherlands. I've got a PhD from the University of Technology Sydney that I completed part-time whilst working, where I focused on machine learning applications in finance. In my prior life, I studied chemical engineering and mathematics.
+I am a quantitative researcher with a focus on systematic equity strategies. I'm currently working as a researcher for Robeco in Rotterdam, The Netherlands. I received my PhD from the University of Technology Sydney that I completed part-time whilst working full-time (don't recommend this if you enjoy your weekends), where I focused on machine learning techniques in finance. In my prior life, I studied chemical engineering and mathematics.
 
-I have wide and varied research interests in machine learning, portfolio construction, and empirical asset pricing. At the moment I'm working on several machine learning projects as they pertain to asset pricing, as well as portfolio optimization for sustainable portfolio objectives. Go [here](/research/) to see more.
+Aside from the proprietary research I do in my day job, I have wide and varied academic interests in portfolio construction, empirical asset pricing, and a soft spot for the index effect. Go [here](/research/) to read more.
 
 ### Career stuff I've done
 
@@ -22,7 +22,7 @@ I have wide and varied research interests in machine learning, portfolio constru
 
 ### Other general stuff I do
 
-Aside from investments, I also enjoy playing a myriad of guitars, watching every grade of horror movie, and dabbling in some ultimate frisbee. You can checkout the less academic things I'm currently reading [here](https://www.goodreads.com/clinthoward).
+Aside from investments, I also enjoy the company of my guitars, watching every grade of horror movie, reading every grade of horror novel. You can checkout the less academic things I'm currently reading [here](https://www.goodreads.com/clinthoward).
 
 
-Everything presented here is my own opinion and are these are not necessarily shared by my employer.  All errors are my own, and in no way constitutes any form of investment advice.
+Everything presented here is my own opinion and are these are not necessarily shared by my employer.  All errors are my own, and the things I say here in no way constitute any form of investment advice.
