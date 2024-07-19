@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Mona Sans';
   src:
-    url('../fonts/MonaSans-Regular.woff2') format('woff2 supports variations'),
-    url('../fonts/MonaSans-Regular.woff2') format('woff2-variations');
+    url('../fonts/CascadiaCode-Regular.woff2') format('woff2 supports variations'),
+    url('../fonts/CascadiaCode-Regular.woff2') format('woff2-variations');
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
@@ -10,8 +10,8 @@
 @font-face {
   font-family: 'Mona Sans SB';
   src:
-    url('../fonts/MonaSans-SemiBold.woff2') format('woff2 supports variations'),
-    url('../fonts/MonaSans-SemiBold.woff2') format('woff2-variations');
+    url('../fonts/CascadiaCode-SemiBold.woff2') format('woff2 supports variations'),
+    url('../fonts/CascadiaCode-SemiBold.woff2') format('woff2-variations');
   font-weight: 100 900;
   font-stretch: 75% 125%;
 }

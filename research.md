@@ -6,6 +6,7 @@ Order: 5
 ---
 
 ### Working papers
+* [ETF Flows and the Index Effect](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4875607)
 * [Better Opt Out: Revisiting the Predictive Power of Options-implied Signals](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4766424) with Iman Honarvar
 * [The Evolving Index Effect: Evidence from Australia](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4779993)
 * [Causal Network Representations in Factor Investing](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4679870) with Harald Lohre and Bastiaan Mudde
@@ -14,7 +15,7 @@ Order: 5
 
 
 ### Publications
-* [3D Investing: Jointly Optimizing Return, Risk, and Sustainability](https://www.tandfonline.com/doi/full/10.1080/0015198X.2024.2335142) with David Blitz, Mike Chen, and Harald Lohre in the Financial Analysts Journal. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4670534)
+* [3D Investing: Jointly Optimizing Return, Risk, and Sustainability](https://www.tandfonline.com/doi/full/10.1080/0015198X.2024.2335142) with David Blitz, Mike Chen, and Harald Lohre forthcoming in the Financial Analysts Journal. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4670534)
 * PhD thesis:[The Battle of the Models: Modern Takes on Traditional and Machine Learning Techniques in Empirical Finance](https://opus.lib.uts.edu.au/handle/10453/173605)
 * [The Term Structure of Machine Learning Alpha](https://doi.org/10.3905/jfds.2023.1.135) with David Blitz, Matthias Hanauer, and Tobias Hoogteijling in the Journal of Financial Data Science. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4474637)
 * [Proper Orthogonal Decomposition (POD) analysis of CFD data for flow in an axisymmetric sudden expansion](https://doi.org/10.1016/j.cherd.2017.05.017)

@@ -5,7 +5,7 @@ header-img: "img/about-bg.jpg"
 Order: 3
 ---
 
-I am a quantitative researcher with a focus on systematic equity strategies. I'm currently working as a researcher for Robeco in Rotterdam, The Netherlands. I received my PhD from the University of Technology Sydney that I completed part-time whilst working full-time (don't recommend this if you enjoy your weekends), where I focused on machine learning techniques in finance. In my prior life, I studied chemical engineering and mathematics.
+I am a quantitative researcher with a focus on systematic equity strategies. I'm currently working as a researcher for Robeco in Rotterdam, The Netherlands. I received my PhD from the University of Technology Sydney that I completed part-time whilst working full-time (I don't recommend this if you enjoy any semblance of life), where I focused on machine learning techniques in finance and the index effect. In my prior life, I studied chemical engineering and mathematics.
 
 Aside from the proprietary research I do in my day job, I have wide and varied academic interests in portfolio construction, empirical asset pricing, and a soft spot for the index effect. Go [here](/research/) to read more.
 
