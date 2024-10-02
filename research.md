@@ -11,10 +11,11 @@ Order: 5
 * [The Evolving Index Effect: Evidence from Australia](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4779993)
 * [Causal Network Representations in Factor Investing](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4679870) with Harald Lohre and Bastiaan Mudde
 * [Beyond GMV: Raising the Bar for Evaluating Covariance Matrix Estimators](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4684926) with M. Sipke Dom, Maarten Jansen, and Harald Lohre
-* [Less is More? Reducing Biases and Overfitting in Machine Learning Return Predictions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4497739)
+
 
 
 ### Publications
+* [Choices Matter When Training Machine Learning Models for Return Prediction](https://www.tandfonline.com/doi/full/10.1080/0015198X.2024.2388024) in the Financial Analysts Journal. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4497739))
 * [3D Investing: Jointly Optimizing Return, Risk, and Sustainability](https://www.tandfonline.com/doi/full/10.1080/0015198X.2024.2335142) with David Blitz, Mike Chen, and Harald Lohre forthcoming in the Financial Analysts Journal. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4670534)
 * PhD thesis:[The Battle of the Models: Modern Takes on Traditional and Machine Learning Techniques in Empirical Finance](https://opus.lib.uts.edu.au/handle/10453/173605)
 * [The Term Structure of Machine Learning Alpha](https://doi.org/10.3905/jfds.2023.1.135) with David Blitz, Matthias Hanauer, and Tobias Hoogteijling in the Journal of Financial Data Science. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4474637)
