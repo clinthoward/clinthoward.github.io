@@ -2,7 +2,7 @@
 title: Musings On Data
 author: Clint Howard
 header-img: img/home-bg.jpg
-email: clint.howard92@gmail.com
+email: clintshoward@gmail.com
 copyright_name:
 description: "Personal website for Clint Howard"
 baseurl: ""
@@ -10,7 +10,7 @@ url: "https://clinthoward.github.io"
 twitter_username:
 github_username:  clinthoward
 facebook_username:
-email_username:  clint.howard92@gmail.com
+email_username:  clintshoward@gmail.com
 linkedin_username: clint-howard-5a29b927
 
 # Google Analytics
@@ -20,7 +20,7 @@ google_analytics: G-RN281GHWK6
 
 author :
   name : Clint Howard
-  email : clint.howard92@gmail.com
+  email : clintshoward@gmail.com
   github : clinthoward
   linkedin: clint-howard-5a29b927
 
