@@ -5,9 +5,9 @@ header-img: "img/about-bg.jpg"
 Order: 3
 ---
 
-I am a quantitative portfolio manager with a focus on systematic equity strategies. I received my PhD from the University of Technology Sydney that I completed part-time whilst working full-time (I don't recommend this if you enjoy any semblance of life), where I focused on machine learning techniques in finance and the index effect. In my prior life, I studied chemical engineering and mathematics.
+I am a quantitative portfolio manager with a focus on systematic equity strategies. I received my PhD from the University of Technology Sydney that I completed part time whilst working full time (I don't recommend this if you enjoy any semblance of life), where I focused on machine learning techniques in finance and the index effect. In my prior life, I studied chemical engineering and mathematics.
 
-Aside from the proprietary research I do in my day job, I have wide and varied academic interests in portfolio construction, empirical asset pricing, and a soft spot for the index effect. Go [here](/research/) to read more.
+Aside from the research I do in my day job, I have wide and varied interests in portfolio construction/optimization, challenging established empirical results, and a soft spot for flow-based effects. Go [here](/research/) to read more.
 
 ### Career stuff I've done
 * 2024 - current: Sovereign wealth fund, UAE
@@ -22,7 +22,7 @@ Aside from the proprietary research I do in my day job, I have wide and varied a
 
 ### Other general stuff I do
 
-Aside from investments, I also enjoy the company of my guitars, watching every grade of horror movie, reading every grade of horror novel. You can checkout the less academic things I'm currently reading [here](https://www.goodreads.com/clinthoward).
+Aside from investments, I also enjoy the company of my guitars, watching every grade of horror movie, and reading every grade of horror novel. You can checkout the less academic things I'm currently reading [here](https://www.goodreads.com/clinthoward).
 
 
 Everything presented here is my own opinion and are these are not necessarily shared by my employer.  All errors are my own, and the things I say here in no way constitute any form of investment advice.
