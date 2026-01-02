@@ -4,6 +4,7 @@ title: "Musings On Data"
 description: "Personal website for Clint Howard"
 header-img: "img/home-bg.jpg"
 ---
+
 <!-- Page Header -->
 <header class="intro-header"
     style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
@@ -14,26 +15,23 @@ header-img: "img/home-bg.jpg"
                     <h1>{{ site.title }}</h1>
                     <hr class="small">
                     <span class="subheading">Quantitative Portfolio Manager & Researcher</span>
-                    <br>
-                    <a href="{{ '/about/' | prepend: site.baseurl }}" class="btn btn-default btn-lg">More About Me</a>
                 </div>
             </div>
-            </div>
-            </div>
-            </header>
-            
-            <!-- Main Content -->
-            <div class="container">
-                <div class="row">
-                    <!-- Main Bio / Highlights -->
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                        <div class="text-center">
-                            <p class="lead">
-                                I am a quantitative portfolio manager focusing on systematic equity strategies.
-                                I combine rigorous academic research with practical implementation to find alpha in global markets.
-                            </p>
-                        </div>
+        </div>
+        </div>
+        </header>
+        
+        <!-- Main Content -->
+        <div class="container">
+            <div class="row">
+                <!-- Main Bio / Highlights -->
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+                    <div class="text-center">
+                        <p class="lead">
+                            I am a quantitative portfolio manager focusing on systematic equity strategies.
+                </p>
+                </div>
 
             <hr>
 
@@ -47,11 +45,21 @@ header-img: "img/home-bg.jpg"
                             <p class="text-muted">Analyzing how ETF flows impact index constituents.</p>
                         </li>
                         <li>
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5005746"><strong>Low Risk Alpha Without Low
-                                    Beta</strong></a>
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4779993"><strong>The Evolving Index Effect: Evidence from
+                                    Australia</strong></a>
+                            <p class="text-muted">SSRN Working Paper (2024)</p>
+                            </li>
+                            <li>
+                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5005746"><strong>Low Risk Alpha Without Low
+                                        Beta</strong></a>
                             <p class="text-muted">Journal of Portfolio Management (2024)</p>
                         </li>
                         <li>
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4766424"><strong>Better Opt Out: Revisiting the Predictive
+                                    Power of Options-implied Signals</strong></a>
+                            <p class="text-muted">Journal of Portfolio Management (Forthcoming)</p>
+                            </li>
+                            <li>
                             <a href="{{ '/research/' | prepend: site.baseurl }}">View all research &rarr;</a>
                         </li>
                     </ul>
@@ -59,7 +67,7 @@ header-img: "img/home-bg.jpg"
                 <div class="col-md-6">
                     <h3><i class="fa fa-newspaper-o"></i> Recent Musings</h3>
                     <ul class="list-unstyled">
-                        {% for post in site.posts limit:3 %}
+                        {% for post in site.posts limit:5 %}
                         <li style="margin-bottom: 15px;">
                             <a href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.title }}</strong></a>
                             <div class="text-muted small">{{ post.date | date: "%B %-d, %Y" }}</div>
@@ -70,10 +78,10 @@ header-img: "img/home-bg.jpg"
                         </li>
                     </ul>
                 </div>
-                </div>
+            </div>
 
         </div>
-        </div>
-        </div>
-        
-        <hr>
+    </div>
+    </div>
+    
+    <hr>
