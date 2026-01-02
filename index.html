@@ -1,37 +1,79 @@
 ---
-layout: page
-description: ""
-header-img: "img/blur1copy.png"
-order: 1
+layout: default
+title: "Musings On Data"
+description: "Personal website for Clint Howard"
+header-img: "img/home-bg.jpg"
 ---
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-  <div class="post-preview">
-      <a href="{{ post.url | prepend: site.baseurl }}">
-          <h2 class="post-title">           
-            {{ post.title }}
-          </h2>
-      </a>
-      <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-  </div>
-  <hr>
-{% endfor %}
+<!-- Page Header -->
+<header class="intro-header"
+    style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{{ site.title }}</h1>
+                    <hr class="small">
+                    <span class="subheading">Quantitative Portfolio Manager & Researcher</span>
+                    <br>
+                    <a href="{{ '/about/' | prepend: site.baseurl }}" class="btn btn-default btn-lg">More About Me</a>
+                </div>
+            </div>
+            </div>
+            </div>
+            </header>
+            
+            <!-- Main Content -->
+            <div class="container">
+                <div class="row">
+                    <!-- Main Bio / Highlights -->
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            
+                        <div class="text-center">
+                            <p class="lead">
+                                I am a quantitative portfolio manager focusing on systematic equity strategies.
+                                I combine rigorous academic research with practical implementation to find alpha in global markets.
+                            </p>
+                        </div>
 
-<!-- Pager -->
-<div class="pagination">
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
- </div>
+            <hr>
 
+            <div class="row">
+                <div class="col-md-6">
+                    <h3><i class="fa fa-flask"></i> Latest Research</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4875607"><strong>ETF Flows and the Index
+                                    Effect</strong></a>
+                            <p class="text-muted">Analyzing how ETF flows impact index constituents.</p>
+                        </li>
+                        <li>
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5005746"><strong>Low Risk Alpha Without Low
+                                    Beta</strong></a>
+                            <p class="text-muted">Journal of Portfolio Management (2024)</p>
+                        </li>
+                        <li>
+                            <a href="{{ '/research/' | prepend: site.baseurl }}">View all research &rarr;</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3><i class="fa fa-newspaper-o"></i> Recent Musings</h3>
+                    <ul class="list-unstyled">
+                        {% for post in site.posts limit:3 %}
+                        <li style="margin-bottom: 15px;">
+                            <a href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.title }}</strong></a>
+                            <div class="text-muted small">{{ post.date | date: "%B %-d, %Y" }}</div>
+                        </li>
+                        {% endfor %}
+                        <li>
+                            <a href="{{ '/blog/' | prepend: site.baseurl }}">Read the blog &rarr;</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+
+        </div>
+        </div>
+        </div>
+        
+        <hr>
