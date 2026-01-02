@@ -11,7 +11,7 @@ twitter_username:
 github_username:  clinthoward
 facebook_username:
 email_username:  clintshoward@gmail.com
-linkedin_username: clint-howard-5a29b927
+linkedin_username: clint-howard
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
@@ -22,7 +22,7 @@ author :
   name : Clint Howard
   email : clintshoward@gmail.com
   github : clinthoward
-  linkedin: clint-howard-5a29b927
+  linkedin: clint-howard
 
 # Build settings
 markdown: kramdown
