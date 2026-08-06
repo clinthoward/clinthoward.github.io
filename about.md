@@ -1,15 +1,16 @@
 ---
 layout: page
 title: "About Me"
+description: "Career and background of Clint Howard, a quantitative portfolio manager and finance researcher based in Sydney."
 header-img: "img/about-bg.jpg"
 Order: 3
 ---
 
-I am a quantitative portfolio manager with a focus on systematic equity strategies. I received my PhD from the University of Technology Sydney that I completed part time whilst working full time (I don't recommend this if you enjoy any semblance of life), where I focused on machine learning techniques in finance and the index effect. In my prior life, I studied chemical engineering and mathematics.
+I am a quantitative portfolio manager focused on systematic equity strategies. I completed a part-time PhD at the University of Technology Sydney while working full time, with research on machine learning in finance and the index effect. Before finance, I studied chemical engineering and mathematics.
 
-Aside from the research I do in my day job, I have wide and varied interests in portfolio construction/optimization, challenging established empirical results, and a soft spot for flow-based effects. Go [here](/research/) to read more.
+My work and research interests include portfolio construction, testing established empirical results, and flow-based effects. [View my research]({{ '/research/' | prepend: site.baseurl }}).
 
-### Career stuff I've done
+## Career
 * 2026 - current: Sydney
 * 2024 - 2026: Sovereign wealth fund, UAE
 * 2022 - 2024: Quantitative Researcher @ Robeco in Rotterdam
@@ -21,9 +22,10 @@ Aside from the research I do in my day job, I have wide and varied interests in 
 * 2011 - 2015: Double degree in Bachelor of Engineering (Chemical & Biomolecular) Honours Class I and the University Medal / Bachelor of Science (Mathematics) @ University of Sydney
 
 
-### Other general stuff I do
+## Outside work
 
-Aside from investments, I also enjoy the company of my guitars, watching every grade of horror movie, and reading every grade of horror novel. You can checkout the less academic things I'm currently reading [here](https://www.goodreads.com/clinthoward).
+Aside from investments, I enjoy playing guitar, watching every grade of horror movie, and reading every grade of horror novel. You can check out [what I am reading on Goodreads](https://www.goodreads.com/clinthoward).
 
+The views expressed here are my own and do not necessarily reflect those of my employer. Nothing on this site is investment advice, and all errors are my own.
 
-Everything presented here is my own opinion and are these are not necessarily shared by my employer.  All errors are my own, and the things I say here in no way constitute any form of investment advice.
+To get in touch, [email me](mailto:clintshoward@gmail.com) or [connect on LinkedIn](https://linkedin.com/in/clint-howard).

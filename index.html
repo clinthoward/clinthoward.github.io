@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Musings On Data"
-description: "Personal website for Clint Howard"
+description: "Clint Howard is a quantitative portfolio manager focused on systematic equity strategies, financial research, and portfolio construction."
 header-img: "img/home-bg.jpg"
 ---
 
@@ -26,51 +26,62 @@ header-img: "img/home-bg.jpg"
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
                     <div class="text-center">
-                        <p class="lead">
-                            I am a quantitative portfolio manager focusing on systematic equity strategies.
-                </p>
-                </div>
+                        <p class="lead">Quantitative portfolio manager focused on systematic equity strategies.</p>
+                        <p class="contact-links">
+                            Sydney <span aria-hidden="true">&middot;</span>
+                            <a href="mailto:{{ site.email_username }}">Email</a> <span aria-hidden="true">&middot;</span>
+                            <a href="https://linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>
+                        </p>
+                    </div>
 
             <hr>
 
             <div class="row">
                 <div class="col-md-6">
-                    <h3><i class="fa fa-flask"></i> Latest Research</h3>
+                    <h2 class="home-section-title"><i class="fa fa-flask" aria-hidden="true"></i> Latest Research</h2>
                     <ul class="list-unstyled">
-                        <li style="margin-bottom: 15px;">
+                        <li class="home-list-item">
                             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4875607"><strong>ETF Flows and the Index Effect</strong></a>
+                            <div class="research-meta">Working paper &middot; 2024</div>
                         </li>
-                        <li style="margin-bottom: 15px;">
+                        <li class="home-list-item">
                             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4779993"><strong>The Evolving Index Effect: Evidence from Australia</strong></a>
+                            <div class="research-meta">Working paper &middot; 2024</div>
                         </li>
-                        <li style="margin-bottom: 15px;">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5005746"><strong>Low Risk Alpha Without Low Beta</strong></a>
+                        <li class="home-list-item">
+                            <a href="https://www.pm-research.com/content/iijpormgmt/early/2024/12/18/jpm20241657"><strong>Low-Risk Alpha without Low Beta</strong></a>
+                            <div class="research-meta">The Journal of Portfolio Management &middot; 2024</div>
                         </li>
-                        <li style="margin-bottom: 15px;">
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4766424"><strong>Better Opt Out: Revisiting the Predictive Power of Options-implied Signals</strong></a>
+                        <li class="home-list-item">
+                            <a href="https://www.pm-research.com/content/iijpormgmt/52/1/122"><strong>Better Opt Out? Revisiting the Predictive Power of Options-Implied Signals</strong></a>
+                            <div class="research-meta">The Journal of Portfolio Management &middot; 2025</div>
                         </li>
-                        <li style="margin-bottom: 15px;">
+                        <li class="home-list-item">
                             <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/isaf.70001"><strong>Causal Network Representations in Factor Investing</strong></a>
+                            <div class="research-meta">Intelligent Systems in Accounting, Finance and Management &middot; 2025</div>
                         </li>
-                        <li style="margin-bottom: 15px;">
-                            <a href="https://www.tandfonline.com/doi/full/10.1080/14697688.2025.2468268"><strong>Beyond GMV: Raising the Bar for Evaluating Covariance Matrix Estimators</strong></a>
+                        <li class="home-list-item">
+                            <a href="https://www.tandfonline.com/doi/full/10.1080/14697688.2025.2468268"><strong>Beyond GMV: The Relevance of Covariance Matrix Estimation for Risk-Based Portfolio Construction</strong></a>
+                            <div class="research-meta">Quantitative Finance &middot; 2025</div>
                         </li>
-                        <li style="margin-bottom: 15px;">
+                        <li class="home-list-item">
                             <a href="https://www.tandfonline.com/doi/full/10.1080/0015198X.2024.2388024"><strong>Choices Matter When Training Machine Learning Models for Return Prediction</strong></a>
+                            <div class="research-meta">Financial Analysts Journal &middot; 2024</div>
                         </li>
-                        <li style="margin-bottom: 15px;">
+                        <li class="home-list-item">
                             <a href="https://www.tandfonline.com/doi/full/10.1080/0015198X.2024.2335142"><strong>3D Investing: Jointly Optimizing Return, Risk, and Sustainability</strong></a>
+                            <div class="research-meta">Financial Analysts Journal &middot; 2024</div>
                         </li>
-                        <li style="margin-bottom: 15px;">
+                        <li class="home-list-item">
                              <a href="{{ '/research/' | prepend: site.baseurl }}">View all research &rarr;</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <h3><i class="fa fa-newspaper-o"></i> Recent Musings</h3>
+                    <h2 class="home-section-title"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Selected Musings</h2>
                     <ul class="list-unstyled">
                         {% for post in site.posts limit:5 %}
-                        <li style="margin-bottom: 15px;">
+                        <li class="home-list-item">
                             <a href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.title }}</strong></a>
                             <div class="text-muted small">{{ post.date | date: "%B %-d, %Y" }}</div>
                         </li>

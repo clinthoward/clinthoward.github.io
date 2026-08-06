@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Cascadia Code';
-  src: url('../fonts/CascadiaCode-Regular.woff2') format('woff2');
+  src: url('../fonts/CascadiaCode.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +26,53 @@ a {
 
 
 .navbar-custom {
-  font-family: 'Cascadia Code' monospace;
+  font-family: 'Cascadia Code', monospace;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 12px;
+  z-index: 10000;
+  padding: 10px 14px;
+  color: white;
+  background: #000;
+  transform: translateY(-120%);
+}
+
+.skip-link:focus {
+  color: white;
+  transform: translateY(0);
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+.contact-links {
+  margin-top: -15px;
+  color: #777;
+}
+
+.home-section-title {
+  font-size: 26px;
+}
+
+.home-list-item {
+  margin-bottom: 15px;
+}
+
+.research-meta {
+  margin-top: 2px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 .sidebar-list {

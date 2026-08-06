@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
 
 <body>
 
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     {% include nav.html %}
 
-    {{ content }}
+    <main id="main-content" tabindex="-1">
+        {{ content }}
+    </main>
 
     {% include footer.html %}
 
