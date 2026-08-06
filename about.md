@@ -24,7 +24,7 @@ Aside from my career research, my research interests include portfolio construct
 
 ## Outside work
 
-Aside from investments, I enjoy playing guitar, watching every grade of horror+comedy movies, and reading every grade of horror novel. You can check out [what I am reading on Goodreads](https://www.goodreads.com/clinthoward) and [what I am watching on Letterboxd](https://letterboxd.com/clinthoward/)
+Aside from investments, I enjoy playing guitar, watching every grade of horror+comedy movie, and reading every grade of horror novel. You can check out [what I am reading on Goodreads](https://www.goodreads.com/clinthoward) and [what I am watching on Letterboxd](https://letterboxd.com/clinthoward/)
 
 The views expressed here are my own and do not necessarily reflect those of my employer. Nothing on this site is investment advice, and all errors are my own.
 
