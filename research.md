@@ -10,7 +10,7 @@ Order: 5
 * [The Evolving Index Effect: Evidence from Australia](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4779993)
 
 ### Publications
-* [Better Opt Out: Revisiting the Predictive Power of Options-implied Signals](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4766424) with Iman Honarvar forthcoming in the Journal of Portfolio Management.
+* [Better Opt Out: Revisiting the Predictive Power of Options-implied Signals](https://www.pm-research.com/content/iijpormgmt/52/1/122) with Iman Honarvar in the Journal of Portfolio Management. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4766424)
 * [Causal Network Representations in Factor Investing](https://onlinelibrary.wiley.com/doi/full/10.1002/isaf.70001) with Harald Lohre and Bastiaan Mudde in Intelligent Systems in Accounting, Finance and Management.
 * [Beyond GMV: Raising the Bar for Evaluating Covariance Matrix Estimators](https://www.tandfonline.com/doi/full/10.1080/14697688.2025.2468268) with M. Sipke Dom, Maarten Jansen, and Harald Lohre in Quantitative Finance. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4684926)
 * [Low Risk Alpha Without Low Beta](https://www.pm-research.com/content/iijpormgmt/early/2024/12/18/jpm20241657) in the Journal of Portfolio Management. [SSRN Link](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5005746)

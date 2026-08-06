@@ -10,7 +10,8 @@ I am a quantitative portfolio manager with a focus on systematic equity strategi
 Aside from the research I do in my day job, I have wide and varied interests in portfolio construction/optimization, challenging established empirical results, and a soft spot for flow-based effects. Go [here](/research/) to read more.
 
 ### Career stuff I've done
-* 2024 - current: Sovereign wealth fund, UAE
+* 2026 - current: Sydney
+* 2024 - 2026: Sovereign wealth fund, UAE
 * 2022 - 2024: Quantitative Researcher @ Robeco in Rotterdam
 * 2019 - 2023: PhD @ UTS Business School in Sydney
 * 2017 - 2022: Quantitative Analyst @ Macquarie Investment Management in Sydney
