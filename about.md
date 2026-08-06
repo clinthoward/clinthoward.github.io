@@ -6,9 +6,9 @@ header-img: "img/about-bg.jpg"
 Order: 3
 ---
 
-I am a quantitative portfolio manager focused on systematic equity strategies. I completed a part-time PhD at the University of Technology Sydney while working full time, with research on machine learning in finance and the index effect. Before finance, I studied chemical engineering and mathematics.
+I am a quantitative portfolio manager focused on systematic equity strategies. I completed a part-time PhD at the University of Technology Sydney while working full time, with research on machine learning in finance and the index effect. Before my detour into investing, I studied chemical engineering and mathematics at the University of Sydney.
 
-My work and research interests include portfolio construction, testing established empirical results, and flow-based effects. [View my research]({{ '/research/' | prepend: site.baseurl }}).
+Aside from my career research, my research interests include portfolio construction/optimization and challenging established empirical results. [View my research]({{ '/research/' | prepend: site.baseurl }}).
 
 ## Career
 * 2026 - current: Sydney
@@ -24,7 +24,7 @@ My work and research interests include portfolio construction, testing establish
 
 ## Outside work
 
-Aside from investments, I enjoy playing guitar, watching every grade of horror movie, and reading every grade of horror novel. You can check out [what I am reading on Goodreads](https://www.goodreads.com/clinthoward).
+Aside from investments, I enjoy playing guitar, watching every grade of horror+comedy movies, and reading every grade of horror novel. You can check out [what I am reading on Goodreads](https://www.goodreads.com/clinthoward) and [what I am watching on Letterboxd](https://letterboxd.com/clinthoward/)
 
 The views expressed here are my own and do not necessarily reflect those of my employer. Nothing on this site is investment advice, and all errors are my own.
 
