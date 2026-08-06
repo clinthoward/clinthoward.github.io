@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About Me"
-description: "Career and background of Clint Howard, a quantitative portfolio manager and finance researcher based in Sydney."
+description: "Career, education, and interests."
 header-img: "img/about-bg.jpg"
 Order: 3
 ---
