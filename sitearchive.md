@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Archive
-description: "Archive of posts by Clint Howard on finance, data, and research."
+description: "Archive of posts on finance, data, and research."
 permalink: /sitearchive/
 sitemap: false
 header-img: "img/1316566.jpg"
