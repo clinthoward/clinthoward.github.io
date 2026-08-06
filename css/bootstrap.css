@@ -6763,3 +6763,15 @@ body {
   margin: 25px;
 }
 
+
+.sidebar-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.sidebar-list li {
+  display: list-item;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
