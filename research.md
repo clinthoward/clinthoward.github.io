@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Research"
-description: "Working papers, publications, and asset-management writing."
+description: "Working papers, publications, and other writing."
 header-img: "img/1316566.jpg"
 Order: 5
 ---
