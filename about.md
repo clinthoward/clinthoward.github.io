@@ -8,10 +8,9 @@ Order: 3
 
 I am a quantitative portfolio manager focused on systematic equity strategies. I completed a part-time PhD at the University of Technology Sydney while working full time, with research on machine learning in finance and the index effect. Before my detour into investing, I studied chemical engineering and mathematics at the University of Sydney.
 
-Aside from my career research, my research interests include portfolio construction/optimization and challenging established empirical results. [View my research]({{ '/research/' | prepend: site.baseurl }}).
+My research interests include portfolio construction and testing established empirical results. [View my research]({{ '/research/' | prepend: site.baseurl }}).
 
 ## Career
-* 2026 - current: Sydney
 * 2024 - 2026: Sovereign wealth fund, UAE
 * 2022 - 2024: Quantitative Researcher @ Robeco in Rotterdam
 * 2019 - 2023: PhD @ UTS Business School in Sydney
@@ -24,7 +23,7 @@ Aside from my career research, my research interests include portfolio construct
 
 ## Outside work
 
-Aside from investments, I enjoy playing guitar, watching every grade of horror+comedy movie, and reading every grade of horror novel. You can check out [what I am reading on Goodreads](https://www.goodreads.com/clinthoward) and [what I am watching on Letterboxd](https://letterboxd.com/clinthoward/)
+Aside from investments, I enjoy playing guitar, watching horror and comedy films of every grade, and reading horror novels of every grade. You can check out [what I am reading on Goodreads](https://www.goodreads.com/clinthoward) and [what I am watching on Letterboxd](https://letterboxd.com/clinthoward/).
 
 The views expressed here are my own and do not necessarily reflect those of my employer. Nothing on this site is investment advice, and all errors are my own.
 

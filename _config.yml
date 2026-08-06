@@ -1,9 +1,8 @@
 # Site settings
-title: Musings On Data
+title: Clint Howard
 author: Clint Howard
 header-img: img/home-bg.jpg
 email: clintshoward@gmail.com
-copyright_name:
 description: "Clint Howard is a quantitative portfolio manager focused on systematic equity strategies and financial research."
 baseurl: ""
 url: "https://clinthoward.github.io"

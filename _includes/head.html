@@ -14,6 +14,7 @@
         {% assign meta_title = site.title %}
     {% endif %}
     {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+    {% assign social_image_url = '/img/social-card.png' | prepend: site.baseurl | prepend: site.url %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,9 +31,47 @@
     <meta property="og:description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
     <meta property="og:url" content="{{ canonical_url }}">
     <meta property="og:site_name" content="Clint Howard">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="{{ social_image_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Clint Howard — Quantitative portfolio manager focused on systematic equity strategies.">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ meta_title | escape }}">
     <meta name="twitter:description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
+    <meta name="twitter:image" content="{{ social_image_url }}">
+    <meta name="twitter:image:alt" content="Clint Howard — Quantitative portfolio manager focused on systematic equity strategies.">
+
+    {% if page.url == '/about/' %}
+    {% assign profile_page_id = canonical_url | append: '#profile-page' %}
+    {% assign person_id = canonical_url | append: '#person' %}
+    {% assign linkedin_url = 'https://linkedin.com/in/' | append: site.linkedin_username %}
+    {% assign github_url = 'https://github.com/' | append: site.github_username %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "@id": {{ profile_page_id | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": "About Me | Clint Howard",
+      "mainEntity": {
+        "@type": "Person",
+        "@id": {{ person_id | jsonify }},
+        "name": "Clint Howard",
+        "url": {{ canonical_url | jsonify }},
+        "jobTitle": "Quantitative Portfolio Manager",
+        "description": "Quantitative portfolio manager focused on systematic equity strategies.",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Sydney, Australia"
+        },
+        "sameAs": [
+          {{ linkedin_url | jsonify }},
+          {{ github_url | jsonify }}
+        ]
+      }
+    }
+    </script>
+    {% endif %}
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
