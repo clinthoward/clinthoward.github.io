@@ -5,6 +5,7 @@ subtitle:   "I investigate some mildly outdated cryptocurrency data and implemen
 date:       2018-02-18 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2018/02/18/Cryptocurrency/
 tags: [python, data, finance]
 comments: True
 ---

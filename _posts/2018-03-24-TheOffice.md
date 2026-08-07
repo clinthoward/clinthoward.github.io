@@ -5,6 +5,7 @@ subtitle:   "I apply textual analysis techniques to analyse every line from The 
 date:       2018-03-24 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2018/03/24/TheOffice/
 tags: [python, data, tv]
 comments: True
 ---

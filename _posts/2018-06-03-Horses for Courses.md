@@ -5,6 +5,7 @@ subtitle:   "I develop a systematic strategy for betting on horse racing."
 date:       2018-06-03 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2018/06/03/Horses-for-Courses/
 tags: [python, data, finance, betting]
 comments: True
 ---
@@ -611,4 +612,3 @@ plt.show()
 
 
 ![png](/img/horseracing_42_0.png)
-

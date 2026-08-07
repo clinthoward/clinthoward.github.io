@@ -5,6 +5,7 @@ subtitle:   "I pull some historical AFR twitter data and run it through VADER se
 date:       2017-07-15 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2017/07/15/Financial-Twitter-Analysis/
 tags: [python, data]
 comments: True
 ---

@@ -5,6 +5,7 @@ subtitle:   "An overview of some financial data scraping techniques using SQL da
 date:       2017-04-29 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2017/04/29/Financial-Scraper/
 tags: [python, data, finance]
 comments: True
 ---

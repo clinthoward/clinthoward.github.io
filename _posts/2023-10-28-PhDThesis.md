@@ -5,6 +5,7 @@ subtitle:   "The Battle of the Models: Modern Takes on Traditional and Machine L
 date:       2023-12-10 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2023/12/10/PhDThesis/
 tags: [python, data, finance, economics, machine learning]
 comments: True
 ---

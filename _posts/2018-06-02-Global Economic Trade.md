@@ -5,6 +5,7 @@ subtitle:   "I investigate the United Nations Global Economic Trade data, partic
 date:       2018-06-02 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2018/06/02/Global-Economic-Trade/
 tags: [python, data, finance]
 comments: True
 ---
@@ -1222,4 +1223,3 @@ plt.show()
 
 
 ![png](/img/globaltrade_28_0.png)
-

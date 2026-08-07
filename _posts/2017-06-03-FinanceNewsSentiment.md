@@ -5,6 +5,7 @@ subtitle:   "Exploration and application of sentiment analysis to Reddit headlin
 date:       2017-06-03 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2017/06/03/FinanceNewsSentiment/
 tags: [python, data, finance]
 comments: True
 ---

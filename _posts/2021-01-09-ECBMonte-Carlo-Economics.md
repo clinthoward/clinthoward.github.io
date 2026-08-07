@@ -5,6 +5,7 @@ subtitle:   "I implement a Monte Carlo analysis of the central bank model from B
 date:       2021-01-09 12:00:00
 author:     "Clint Howard"
 category: Economics
+permalink: /economics/2021/01/09/ECBMonte-Carlo-Economics/
 tags: [python, data, finance, economics]
 comments: True
 ---
@@ -823,4 +824,3 @@ plt.xlabel('Initial Capital', fontsize=12)
 
 
 ![png](/img/ecbmodel_24_1.png)
-

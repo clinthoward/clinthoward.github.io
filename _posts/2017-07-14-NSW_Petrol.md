@@ -5,6 +5,7 @@ subtitle:   "Some data exploration of NSW petrol prices."
 date:       2017-07-14 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2017/07/14/NSW_Petrol/
 tags: [python, data]
 comments: True
 ---

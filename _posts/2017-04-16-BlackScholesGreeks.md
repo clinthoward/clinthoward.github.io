@@ -5,6 +5,7 @@ subtitle:   "An exploration of the Black-Scholes framework. A variety of plottin
 date:       2017-04-16 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2017/04/16/BlackScholesGreeks/
 tags: [python, data, finance]
 comments: True
 ---
@@ -673,4 +674,3 @@ plt.show()
 * http://www.smileofthales.com/options-greeks-python/
 * http://www.maths.usyd.edu.au/u/UG/SM/MATH3075/r/Haug_Taleb_2011.pdf
 * https://www.cs.princeton.edu/courses/archive/fall09/cos323/papers/black_scholes73.pdf
-

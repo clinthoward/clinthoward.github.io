@@ -5,6 +5,7 @@ subtitle:   "I build a simple LSTM model to forecast Australian average rainfall
 date:       2018-06-02 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2018/06/02/Australian-Weather/
 tags: [python, data, weather]
 comments: True
 ---
@@ -860,4 +861,3 @@ run_preds_supervised(df, 3200, 'Date')
 
 
 ![png](/img/ausweather_42_1.png)
-

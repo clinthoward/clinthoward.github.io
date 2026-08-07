@@ -5,6 +5,7 @@ subtitle:   "Basic approach to a Kaggle competition!"
 date:       2018-05-26 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2018/05/26/Home-Credit-Data/
 tags: [python, data, kaggle]
 comments: True
 ---
@@ -1418,5 +1419,4 @@ submission.head()
   </tbody>
 </table>
 </div>
-
 

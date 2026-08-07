@@ -5,6 +5,7 @@ subtitle:   "I investigate LoL match data and apply some basic machine learning 
 date:       2017-10-14 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2017/10/14/League-of-Legends/
 tags: [python, data, gaming]
 comments: True
 ---

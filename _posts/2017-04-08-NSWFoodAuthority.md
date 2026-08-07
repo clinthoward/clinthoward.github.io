@@ -5,6 +5,7 @@ subtitle:   "I implement a web scraper to obtain some NSW Government data and th
 date:       2017-04-08 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2017/04/08/NSWFoodAuthority/
 tags: [python, data, food]
 comments: True
 ---

@@ -5,6 +5,7 @@ subtitle:   "I apply empirical asset pricing techniques to study the cross-secti
 date:       2020-12-23 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2020/12/23/Cryptocurrencies/
 tags: [python, data, finance, cryptocurrency, investing]
 comments: True
 ---
@@ -781,5 +782,4 @@ This table shows the average coefficient associated with each factor, and a corr
   </tbody>
 </table>
 </div>
-
 

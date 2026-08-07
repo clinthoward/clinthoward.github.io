@@ -5,6 +5,7 @@ subtitle:   "Various ways to pull in and analyse Index data, Equities and Renewa
 date:       2017-06-17 12:00:00
 author:     "Clint Howard"
 category: Portfolio
+permalink: /portfolio/2017/06/17/Stock-Tracker-Blog/
 tags: [python, data, finance]
 comments: True
 ---
