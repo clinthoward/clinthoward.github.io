@@ -3,6 +3,7 @@ layout: default
 page.comments: True
 ---
 
+{% assign reading_time = content | strip_html | number_of_words | plus: 199 | divided_by: 200 %}
 
 <!-- Post Header -->
 
@@ -15,8 +16,15 @@ page.comments: True
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
-                    <span class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
-		    </div>
+                    <span class="meta">{{ page.date | date: "%B %-d, %Y" }} <span aria-hidden="true">&middot;</span> {{ reading_time }} min read</span>
+                    {% if page.tags and page.tags != empty %}
+                    <ul class="post-topics" aria-label="Topics">
+                        {% for tag in page.tags %}
+                        <li><a href="{{ '/sitearchive/' | prepend: site.baseurl }}#topic-{{ tag | slugify }}">{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
@@ -28,16 +36,83 @@ page.comments: True
 <article>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-		<script type="text/x-mathjax-config">
- 		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
- 		</script>
-		<script type="text/javascript" async
- 		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
- 		</script>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-shell">
+                <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+                </script>
+                <script type="text/javascript" async
+                    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+                </script>
+
+                <nav class="post-toc" aria-labelledby="post-toc-title" hidden>
+                    <h2 id="post-toc-title">In this post</h2>
+                    <ol class="post-toc-list"></ol>
+                </nav>
 
                 {% assign post_content = content | replace: '<h1', '<h2' | replace: '</h1>', '</h2>' %}
-                {{ post_content }}
+                <div class="post-content" data-post-title="{{ page.title | escape }}">
+                    {{ post_content }}
+                </div>
+
+                {% assign related_count = 0 %}
+                {% capture related_urls %}|{{ page.url }}|{% endcapture %}
+                {% capture related_items %}
+                    {% for candidate in site.posts %}
+                        {% if related_count < 3 and candidate.url != page.url %}
+                            {% assign is_related = false %}
+                            {% for tag in page.tags %}
+                                {% unless tag == 'python' or tag == 'data' %}
+                                    {% if candidate.tags contains tag %}
+                                        {% assign is_related = true %}
+                                    {% endif %}
+                                {% endunless %}
+                            {% endfor %}
+                            {% capture candidate_marker %}|{{ candidate.url }}|{% endcapture %}
+                            {% unless related_urls contains candidate_marker %}
+                                {% if is_related %}
+                                    <li>
+                                        <a href="{{ candidate.url | prepend: site.baseurl }}">{{ candidate.title }}</a>
+                                        <time datetime="{{ candidate.date | date_to_xmlschema }}">{{ candidate.date | date: "%Y" }}</time>
+                                    </li>
+                                    {% assign related_count = related_count | plus: 1 %}
+                                    {% capture related_urls %}{{ related_urls }}{{ candidate_marker }}{% endcapture %}
+                                {% endif %}
+                            {% endunless %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if related_count < 3 %}
+                        {% for candidate in site.posts %}
+                            {% if related_count < 3 and candidate.url != page.url %}
+                                {% assign is_related = false %}
+                                {% for tag in page.tags %}
+                                    {% if candidate.tags contains tag %}
+                                        {% assign is_related = true %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% capture candidate_marker %}|{{ candidate.url }}|{% endcapture %}
+                                {% unless related_urls contains candidate_marker %}
+                                    {% if is_related %}
+                                        <li>
+                                            <a href="{{ candidate.url | prepend: site.baseurl }}">{{ candidate.title }}</a>
+                                            <time datetime="{{ candidate.date | date_to_xmlschema }}">{{ candidate.date | date: "%Y" }}</time>
+                                        </li>
+                                        {% assign related_count = related_count | plus: 1 %}
+                                        {% capture related_urls %}{{ related_urls }}{{ candidate_marker }}{% endcapture %}
+                                    {% endif %}
+                                {% endunless %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endcapture %}
+
+                {% if related_count > 0 %}
+                <aside class="related-posts" aria-labelledby="related-posts-title">
+                    <h2 id="related-posts-title">Related posts</h2>
+                    <ul>{{ related_items }}</ul>
+                </aside>
+                {% endif %}
+
                 <hr>
 
                 <ul class="pager">

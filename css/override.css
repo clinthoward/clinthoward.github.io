@@ -12,6 +12,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('../fonts/MonaSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('../fonts/MonaSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: 'Cascadia Code', monospace;
 }
@@ -85,4 +101,346 @@ button:focus {
   display: list-item;
   margin-bottom: 6px;
   line-height: 1.35;
+}
+
+.post-heading .meta {
+  margin-top: 4px;
+}
+
+.post-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-topics li {
+  margin: 0;
+}
+
+.post-topics a {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  color: #333;
+  font-size: 12px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.post-topics a:hover,
+.post-topics a:focus {
+  border-color: blue;
+  color: blue;
+}
+
+.post-shell {
+  padding-top: 38px;
+}
+
+.post-content,
+.post-toc,
+.related-posts {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.post-content {
+  overflow-x: hidden;
+  color: #2f2f2f;
+  font-family: 'Mona Sans', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.post-content p {
+  margin: 1.35em 0;
+  line-height: inherit;
+}
+
+.post-content a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-top: 1.1em;
+  margin-bottom: 1.35em;
+  padding-left: 1.5em;
+}
+
+.post-content li {
+  margin: 0.45em 0;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  scroll-margin-top: 24px;
+  font-family: 'Cascadia Code', monospace;
+  line-height: 1.25;
+}
+
+.post-content h2 {
+  margin-top: 2.4em;
+  margin-bottom: 0.7em;
+  font-size: 28px;
+}
+
+.post-content h3 {
+  margin-top: 2.1em;
+  margin-bottom: 0.65em;
+  font-size: 22px;
+}
+
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  font-size: 18px;
+}
+
+.post-content blockquote {
+  margin: 1.6em 0;
+  padding: 0.1em 0 0.1em 1.2em;
+  border-left: 3px solid #bbb;
+  color: #555;
+  font-style: normal;
+}
+
+.post-content blockquote p {
+  margin: 0.8em 0;
+}
+
+.post-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.8em auto;
+}
+
+.post-content pre {
+  max-width: 100%;
+  margin: 1.8em 0;
+  padding: 16px 18px;
+  overflow-x: auto;
+  font-family: 'Cascadia Code', monospace;
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-content code,
+.post-content kbd,
+.post-content samp {
+  font-family: 'Cascadia Code', monospace;
+  font-size: 0.88em;
+}
+
+.post-content pre code {
+  padding: 0;
+  font-size: inherit;
+  white-space: inherit;
+  background: transparent;
+}
+
+.post-content .MJXc-display {
+  max-width: 100%;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-content table {
+  display: block;
+  max-width: 100%;
+  margin: 1.8em 0;
+  overflow-x: auto;
+  font-size: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-content th,
+.post-content td {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+.post-toc {
+  margin-bottom: 42px;
+  padding: 18px 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.post-toc[hidden] {
+  display: none;
+}
+
+.post-toc h2,
+.related-posts h2 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.post-toc ol {
+  margin: 0;
+  padding-left: 1.35em;
+}
+
+.post-toc ol ol {
+  margin-top: 5px;
+}
+
+.post-toc li {
+  margin: 5px 0;
+  padding-left: 3px;
+  font-family: 'Mona Sans', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.post-toc a {
+  color: #333;
+  text-decoration: none;
+}
+
+.post-toc a:hover,
+.post-toc a:focus {
+  color: blue;
+  text-decoration: underline;
+}
+
+.related-posts {
+  margin-top: 58px;
+  padding-top: 24px;
+  border-top: 1px solid #ccc;
+}
+
+.related-posts ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-posts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 10px 0;
+  font-family: 'Mona Sans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.related-posts time,
+.topic-group time {
+  flex: 0 0 auto;
+  color: #777;
+  font-family: 'Cascadia Code', monospace;
+  font-size: 12px;
+}
+
+.topic-archive,
+.year-archive {
+  margin-bottom: 48px;
+}
+
+.topic-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 36px;
+  padding: 0;
+  list-style: none;
+}
+
+.topic-index li {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin: 0;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+}
+
+.topic-index span {
+  color: #777;
+  font-size: 12px;
+}
+
+.topic-group {
+  margin: 32px 0;
+  scroll-margin-top: 24px;
+}
+
+.topic-group h3,
+.year-archive h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.topic-group ul {
+  padding-left: 20px;
+}
+
+.topic-group li {
+  margin: 7px 0;
+  line-height: 1.45;
+}
+
+.topic-group time {
+  margin-left: 6px;
+}
+
+@media only screen and (max-width: 767px) {
+  .intro-header .post-heading {
+    padding-top: 64px;
+  }
+
+  .post-shell {
+    padding-top: 28px;
+  }
+
+  .post-content {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .post-content h2 {
+    font-size: 24px;
+  }
+
+  .post-content h3 {
+    font-size: 20px;
+  }
+
+  .post-toc {
+    margin-bottom: 34px;
+    padding: 16px 14px;
+  }
+
+  .related-posts li {
+    display: block;
+  }
+
+  .related-posts time {
+    display: block;
+    margin-top: 2px;
+  }
 }
