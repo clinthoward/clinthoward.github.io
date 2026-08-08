@@ -6,12 +6,12 @@ header-img: "img/about-bg.jpg"
 Order: 3
 ---
 
-I am a quantitative portfolio manager focused on systematic equity strategies. I completed a part-time PhD at the University of Technology Sydney while working full time, with research on machine learning in finance and the index effect. Before my detour into investing, I studied chemical engineering and mathematics at the University of Sydney.
+I work on systematic equity strategies. I completed a part-time PhD at the University of Technology Sydney while working full time, with research on machine learning in finance and the index effect. Before my detour into investing, I studied chemical engineering and mathematics at the University of Sydney.
 
 My research interests include portfolio construction and testing established empirical results. [View my research]({{ '/research/' | prepend: site.baseurl }}).
 
 ## Career
-* 2024 - 2026: Sovereign wealth fund, UAE
+* 2024 - 2026: Quantitative Portfolio Manager @ ADIA in Abu Dhabi
 * 2022 - 2024: Quantitative Researcher @ Robeco in Rotterdam
 * 2019 - 2023: PhD @ UTS Business School in Sydney
 * 2017 - 2022: Quantitative Analyst @ Macquarie Investment Management in Sydney

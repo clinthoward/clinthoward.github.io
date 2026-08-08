@@ -15,6 +15,8 @@ FIXTURE = File.join(ROOT, "test", "fixtures", "posts", "2026-08-07-clean-url-tes
 LEGACY_URLS = File.readlines(File.join(ROOT, "test", "legacy_post_urls.txt"), chomp: true).reject(&:empty?).sort.freeze
 TEST_URL = "/blog/clean-url-test/"
 CANONICAL_URL = "https://clinthoward.github.io#{TEST_URL}"
+ESSAY_URL = "/blog/when-the-noise-disappears/"
+ESSAY_CANONICAL_URL = "https://clinthoward.github.io#{ESSAY_URL}"
 
 def assert(condition, message)
   raise "FAIL: #{message}" unless condition
@@ -25,7 +27,7 @@ def copy_source(destination)
   tracked_files = `git -C #{Shellwords.escape(ROOT)} ls-files -z`.split("\0")
 
   tracked_files.each do |relative_path|
-    next if relative_path.start_with?("test/")
+    next if relative_path.start_with?("test/") || relative_path.start_with?("_posts/")
 
     source = File.join(ROOT, relative_path)
     target = File.join(destination, relative_path)
@@ -33,6 +35,7 @@ def copy_source(destination)
     FileUtils.cp(source, target)
   end
 
+  FileUtils.cp_r(File.join(ROOT, "_posts"), File.join(destination, "_posts"))
   FileUtils.cp_r(File.join(ROOT, "test"), File.join(destination, "test"))
 end
 
@@ -55,6 +58,15 @@ def assert_post_routes_declared(source)
     has_valid_slug = front_matter.match?(/^slug:\s*[a-z0-9]+(?:-[a-z0-9]+)*\s*$/)
 
     assert(has_permalink || has_valid_slug, "#{File.basename(post_path)} needs an explicit permalink or a lowercase, hyphenated slug")
+  end
+end
+
+def assert_clean_post_routes(site)
+  site.posts.docs.each do |post|
+    next if post.data["permalink"]
+
+    expected_url = "/blog/#{post.data.fetch("slug")}/"
+    assert(post.url == expected_url, "#{post.relative_path} generated #{post.url} instead of #{expected_url}")
   end
 end
 
@@ -109,11 +121,48 @@ Dir.mktmpdir("post-route-test-") do |temporary_directory|
   assert_post_routes_declared(source)
   production_site = build_site(source, production_destination)
   production_urls = production_site.posts.docs.map(&:url).sort
-  assert(production_urls == LEGACY_URLS, "published post URLs changed:\n#{production_urls.join("\n")}")
+  missing_legacy_urls = LEGACY_URLS - production_urls
+  assert(missing_legacy_urls.empty?, "published legacy URLs changed:\n#{missing_legacy_urls.join("\n")}")
+  assert(production_urls.uniq.length == production_urls.length, "production build contains duplicate post URLs")
+  assert_clean_post_routes(production_site)
   assert(LEGACY_URLS.length == 25, "legacy URL manifest must contain 25 posts")
   assert(LEGACY_URLS.uniq.length == LEGACY_URLS.length, "legacy URL manifest contains duplicates")
   LEGACY_URLS.each do |url|
     assert(File.file?(output_path(production_destination, url)), "missing legacy output #{url}")
+  end
+  essay_html = output_path(production_destination, ESSAY_URL)
+  assert(File.file?(essay_html), "published essay output is missing")
+  assert(!File.exist?(output_path(production_destination, "/essays/2026/08/07/when-the-noise-disappears/")), "essay generated a category/date URL")
+  assert_contains(essay_html, %(<link rel="canonical" href="#{ESSAY_CANONICAL_URL}">), "essay canonical metadata")
+  assert_contains(essay_html, %(<meta property="og:url" content="#{ESSAY_CANONICAL_URL}">), "essay Open Graph metadata")
+
+  essay_json_ld = File.read(essay_html).scan(%r{<script type="application/ld\+json">\s*(.*?)\s*</script>}m).flatten.map { |block| JSON.parse(block) }
+  essay_blog_posting = essay_json_ld.find { |block| block["@type"] == "BlogPosting" }
+  assert(essay_blog_posting, "essay BlogPosting JSON-LD is missing")
+  assert(essay_blog_posting["url"] == ESSAY_CANONICAL_URL, "essay JSON-LD URL is wrong")
+  assert(essay_blog_posting.dig("mainEntityOfPage", "@id") == ESSAY_CANONICAL_URL, "essay JSON-LD page ID is wrong")
+
+  essay_markup = File.read(essay_html)
+  assert(essay_markup.scan(/<h1(?:\s|>)/).length == 1, "essay must render exactly one h1")
+  %w[
+    what-i-mean-by-noise
+    a-temporary-home-for-unfinished-things
+    when-a-useful-system-becomes-outdated
+    an-always-on-phd
+    the-system-after-the-phd
+    systems-train-attention
+    fit-matters-more-than-optimisation
+    five-questions-for-old-systems
+  ].each do |heading_id|
+    assert(essay_markup.match?(%r{<h[23] id="#{heading_id}">}), "essay heading ##{heading_id} is missing")
+  end
+  assert_contains(essay_html, %(class="post-toc"), "essay contents navigation")
+  assert_contains(File.join(production_destination, "feed.xml"), ESSAY_CANONICAL_URL, "essay feed entry")
+  assert_contains(File.join(production_destination, "sitemap.xml"), ESSAY_CANONICAL_URL, "essay sitemap entry")
+  production_archive_html = File.join(production_destination, "sitearchive", "index.html")
+  assert_contains(production_archive_html, %(href="#{ESSAY_URL}"), "essay archive link")
+  %w[productivity systems attention self-knowledge phd].each do |tag|
+    assert_contains(production_archive_html, %(id="topic-#{tag}"), "essay #{tag} topic section")
   end
   production_text_files = Dir.glob(File.join(production_destination, "**", "*.{html,xml,json}"))
   assert(production_text_files.none? { |path| File.read(path).include?("clean-url-test") }, "fixture leaked into the production build")
@@ -123,7 +172,8 @@ Dir.mktmpdir("post-route-test-") do |temporary_directory|
   assert_post_routes_declared(source)
   fixture_site = build_site(source, fixture_destination)
   fixture_urls = fixture_site.posts.docs.map(&:url).sort
-  assert(fixture_urls == (LEGACY_URLS + [TEST_URL]).sort, "fixture build has unexpected post URLs")
+  assert(fixture_urls == (production_urls + [TEST_URL]).sort, "fixture build has unexpected post URLs")
+  assert_clean_post_routes(fixture_site)
 
   fixture_html = output_path(fixture_destination, TEST_URL)
   assert(File.file?(fixture_html), "clean URL output is missing")

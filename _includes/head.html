@@ -5,7 +5,7 @@
         {% assign meta_description = meta_description | append: pagination_suffix %}
     {% endif %}
     {% if page.url == '/' or page.url == '/index.html' %}
-        {% assign meta_title = 'Clint Howard | Quantitative Portfolio Manager' %}
+        {% assign meta_title = 'Clint Howard' %}
     {% elsif paginator and paginator.page > 1 %}
         {% assign meta_title = page.title | append: pagination_suffix | append: ' | Clint Howard' %}
     {% elsif page.title %}
@@ -34,12 +34,12 @@
     <meta property="og:image" content="{{ social_image_url }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Clint Howard — Quantitative portfolio manager focused on systematic equity strategies.">
+    <meta property="og:image:alt" content="Clint Howard — Quantitative portfolio manager and researcher focused on systematic equity strategies.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ meta_title | escape }}">
     <meta name="twitter:description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
     <meta name="twitter:image" content="{{ social_image_url }}">
-    <meta name="twitter:image:alt" content="Clint Howard — Quantitative portfolio manager focused on systematic equity strategies.">
+    <meta name="twitter:image:alt" content="Clint Howard — Quantitative portfolio manager and researcher focused on systematic equity strategies.">
 
     {% if page.layout == 'post' %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
@@ -87,7 +87,7 @@
         "name": "Clint Howard",
         "url": {{ canonical_url | jsonify }},
         "jobTitle": "Quantitative Portfolio Manager",
-        "description": "Quantitative portfolio manager focused on systematic equity strategies.",
+        "description": "Quantitative portfolio manager and researcher focused on systematic equity strategies.",
         "homeLocation": {
           "@type": "Place",
           "name": "Sydney, Australia"
