@@ -6,10 +6,11 @@ header-img: "img/1316566.jpg"
 Order: 5
 ---
 
-<nav class="research-profile-links" aria-label="Research profiles">
+<p class="research-profile-links">
   <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2982867">SSRN</a>
+  <span aria-hidden="true">&middot;</span>
   <a href="https://scholar.google.com/citations?user=DOKjT8EAAAAJ&amp;hl=en">Google Scholar</a>
-</nav>
+</p>
 
 ## Working papers
 * [ETF Flows and the Index Effect](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4875607) — working paper · 2024

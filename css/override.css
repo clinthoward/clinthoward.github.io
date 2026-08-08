@@ -92,27 +92,9 @@ button:focus {
 }
 
 .research-profile-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
   margin: 0 0 32px;
-}
-
-.research-profile-links a {
-  display: inline-block;
-  padding: 9px 13px;
-  border: 1px solid blue;
-  border-radius: 3px;
-  font-weight: bold;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
-.research-profile-links a:hover,
-.research-profile-links a:focus {
-  color: white;
-  background: blue;
+  color: #777;
+  text-align: center;
 }
 
 .archived-writing {
