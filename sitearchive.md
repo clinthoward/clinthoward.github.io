@@ -9,6 +9,26 @@ Order: 2
 ---
 
 <section id="archive">
+  <section class="year-archive" aria-labelledby="years-title">
+  <h2 id="years-title">Browse by year</h2>
+  {% assign current_year = '' %}
+  {% for post in site.posts %}
+      {% assign post_year = post.date | date: "%Y" %}
+      {% if post_year != current_year %}
+        {% unless forloop.first %}
+        </ul>
+        {% endunless %}
+        <h3>{{ post_year }}</h3>
+        <ul class="past">
+        {% assign current_year = post_year %}
+      {% endif %}
+      <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: " %d %b " }}</time><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+  {% endfor %}
+  {% if site.posts != empty %}
+  </ul>
+  {% endif %}
+  </section>
+
   <section class="topic-archive" aria-labelledby="topics-title">
     <h2 id="topics-title">Browse by topic</h2>
     {% assign sorted_tags = site.tags | sort %}
@@ -37,26 +57,6 @@ Order: 2
         </section>
       {% endfor %}
     </div>
-  </section>
-
-  <section class="year-archive" aria-labelledby="years-title">
-  <h2 id="years-title">Browse by year</h2>
-  {% assign current_year = '' %}
-  {% for post in site.posts %}
-      {% assign post_year = post.date | date: "%Y" %}
-      {% if post_year != current_year %}
-        {% unless forloop.first %}
-        </ul>
-        {% endunless %}
-        <h3>{{ post_year }}</h3>
-        <ul class="past">
-        {% assign current_year = post_year %}
-      {% endif %}
-      <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: " %d %b " }}</time><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
-  {% endfor %}
-  {% if site.posts != empty %}
-  </ul>
-  {% endif %}
   </section>
 
   <section class="archived-writing" aria-labelledby="archived-writing-title">
