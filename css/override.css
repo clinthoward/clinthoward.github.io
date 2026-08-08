@@ -94,6 +94,7 @@ button:focus {
 .research-profile-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin: 0 0 32px;
 }
