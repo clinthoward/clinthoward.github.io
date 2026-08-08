@@ -6,9 +6,9 @@ header-img: "img/1316566.jpg"
 Order: 5
 ---
 
-<p class="research-profile-links">
+<p class="text-center">
   <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2982867">SSRN</a>
-  <span aria-hidden="true">&middot;</span>
+  <span aria-hidden="true">|</span>
   <a href="https://scholar.google.com/citations?user=DOKjT8EAAAAJ&amp;hl=en">Google Scholar</a>
 </p>
 
