@@ -44,7 +44,8 @@ def build_site(source, destination)
     "source" => source,
     "destination" => destination,
     "quiet" => true,
-    "disable_disk_cache" => true
+    "disable_disk_cache" => true,
+    "future" => true
   )
   site = Jekyll::Site.new(config)
   site.process

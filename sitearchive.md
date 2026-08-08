@@ -58,4 +58,12 @@ Order: 2
   </ul>
   {% endif %}
   </section>
+
+  <section class="archived-writing" aria-labelledby="archived-writing-title">
+    <h2 id="archived-writing-title">Archived writing</h2>
+    <ul>
+      <li><a href="https://www.robeco.com/en-int/insights/2023/03/machine-learning-models-can-spot-interesting-interactions">ML in Asset Management</a> — Robeco · 2023</li>
+      <li><a href="https://www.robeco.com/en-int/insights/2023/04/harnessing-gpt-for-smarter-asset-management-prospects-and-perils">GPT in Asset Management</a> — Robeco · 2023</li>
+    </ul>
+  </section>
 </section>
