@@ -7,7 +7,7 @@ date: 2026-08-08 12:00:00 +1000
 author: "Clint Howard"
 category: Essays
 tags: [productivity, systems, attention, self-knowledge, phd]
-comments: true
+comments: false
 ---
 
 Google Keep is basically all I need to run my life. Information comes in, I do something with it, and eventually it leaves. This way of capturing information gives me noticeable mental relief. Once an idea, task, or reminder is in the note, I can stop playing it back in my head because I know that it has somewhere to live. I used to describe this as an efficient system that helped me run my life, giving me some semblance of control. This same instinct showed up in my skincare routine, wardrobe catalogue, research processes, and holiday planning. The systems that tended to stick were the ones that make some recurring part of life quieter, reducing the noise.
