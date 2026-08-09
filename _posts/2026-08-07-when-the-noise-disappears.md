@@ -3,7 +3,7 @@ layout: post
 title: "When the Noise Disappears"
 subtitle: "On building systems for calm, and learning when to let them go."
 slug: when-the-noise-disappears
-date: 2026-08-09 12:00:00 +1000
+date: 2026-08-08 12:00:00 +1000
 author: "Clint Howard"
 category: Essays
 tags: [productivity, systems, attention, self-knowledge, phd]
