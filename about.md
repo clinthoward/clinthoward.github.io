@@ -11,6 +11,7 @@ I work on systematic equity strategies. I completed a part-time PhD at the Unive
 My research interests include portfolio construction and testing established empirical results. [View my research]({{ '/research/' | prepend: site.baseurl }}).
 
 ## Career
+* 2026 - current: Senior Quant @ Macquarie Systematic Investments in Sydney
 * 2024 - 2026: Quantitative Portfolio Manager @ ADIA in Abu Dhabi
 * 2022 - 2024: Quantitative Researcher @ Robeco in Rotterdam
 * 2019 - 2023: PhD @ UTS Business School in Sydney
